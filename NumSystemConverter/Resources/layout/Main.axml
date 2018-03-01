@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/relativeLayout1">
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/init"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -16,7 +16,7 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/text"
+        android:layout_toRightOf="@+id/init"
         android:hint="Number"
         android:padding="16dp" />
     <Button
@@ -26,90 +26,123 @@
         android:layout_marginTop="16dp"
         android:text="count"
         android:padding="16dp"
-        android:layout_below="@+id/number" />
+        android:layout_below="@+id/radioGroup1" />
     <TextView
         android:id="@+id/textBin"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33.5dp"
+        android:layout_marginTop="10dp"
         android:text="Binarnie:"
         android:padding="16dp"
         android:layout_below="@+id/scorebutton"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:textSize="15dp" />
     <TextView
         android:id="@+id/textBinScore"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33.5dp"
+        android:layout_marginTop="10dp"
         android:text="WynikBin"
         android:padding="16dp"
         android:layout_below="@+id/scorebutton"
         android:layout_toRightOf="@+id/textBin"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:textSize="15dp"
-        android:layout_marginLeft="51.0dp" />
+        android:layout_marginLeft="49.5dp" />
     <TextView
-        android:textColor="@android:color/white"
-        android:textSize="15dp"
         android:id="@+id/textDec"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30.0dp"
+        android:layout_marginTop="10.0dp"
         android:padding="16dp"
         android:text="Dziesiętnie:"
         android:layout_below="@+id/textBin" />
     <TextView
-        android:textColor="@android:color/white"
-        android:textSize="15dp"
         android:id="@+id/textDecScore"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30.0dp"
+        android:layout_marginTop="10.0dp"
         android:text="WynikDzies"
         android:padding="16dp"
         android:layout_below="@+id/textBin"
         android:layout_toRightOf="@+id/textDec" />
     <TextView
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:textSize="15dp"
         android:id="@+id/textHex"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30.0dp"
+        android:layout_marginTop="10.0dp"
         android:padding="16dp"
         android:text="Hexadecymalnie:"
         android:layout_below="@+id/textDec" />
     <TextView
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:textSize="15dp"
         android:id="@+id/textHexScore"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30.0dp"
+        android:layout_marginTop="10.0dp"
         android:text="WynikHex"
         android:padding="16dp"
         android:layout_below="@+id/textDec"
         android:layout_toRightOf="@+id/textHex" />
     <TextView
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:textSize="15dp"
         android:id="@+id/textOct"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30.0dp"
+        android:layout_marginTop="10.0dp"
         android:padding="16dp"
         android:text="Oktagonalnie:"
         android:layout_below="@+id/textHex" />
     <TextView
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/background_dark"
         android:textSize="15dp"
-        android:id="@+id/textHexScore"
+        android:id="@+id/textOctScore"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30.0dp"
+        android:layout_marginTop="10.0dp"
         android:text="WynikOct"
         android:padding="16dp"
         android:layout_below="@+id/textHex"
         android:layout_toRightOf="@+id/textOct" />
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/init"
+        android:id="@+id/radioGroup1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="In Bin"
+            android:id="@+id/InradioButton1"
+            android:layout_marginLeft="150.0dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Oct"
+            android:id="@+id/InradioButton2"
+            android:layout_marginLeft="150.0dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Dec"
+            android:id="@+id/InradioButton3"
+            android:layout_marginLeft="150.0dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Hex"
+            android:id="@+id/InradioButton4"
+            android:layout_marginLeft="150.0dp" />
+    </RadioGroup>
 </RelativeLayout>

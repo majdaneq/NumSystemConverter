@@ -54,7 +54,12 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinConv.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="DecConv.cs" />
+    <Compile Include="HexConv.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="OctConv.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
