@@ -14,7 +14,7 @@ namespace NumSystemConverter
 {
     class OctConv : Converter
     {
-        public OctConv()
+        public OctConv(TextView t1, TextView t2, TextView t3, TextView t4, double numberToConvert)
         {
 
         }

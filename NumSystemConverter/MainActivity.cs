@@ -13,15 +13,15 @@ namespace NumSystemConverter
         Button buttonCount;
         TextView init;
         public TextView textBin;
-        TextView textBinScore;
+        public TextView textBinScore;
         TextView textDec;
-        TextView textDecScore;
+        public TextView textDecScore;
         TextView textHex;
-        TextView textHexScore;
+        public TextView textHexScore;
         TextView textOct;
-        TextView textOctScore;
-        public RadioButton InBin;
-        public RadioButton InDec;
+        public TextView textOctScore;
+        public static RadioButton InBin;
+        public static RadioButton InDec;
         public RadioButton InHex;
         public RadioButton InOct;
 
@@ -53,7 +53,8 @@ namespace NumSystemConverter
             buttonCount.Click +=
                delegate
                {
-                   Converter convert = new Converter(number.Text);                        //string to convert                  
+                   Converter convert = new Converter(number.Text, InBin, InOct, InDec, InHex, textBinScore, textOctScore, textDecScore, textHexScore);                        //string to convert   
+                                   
                };
         }
     }

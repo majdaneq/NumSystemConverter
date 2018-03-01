@@ -14,9 +14,9 @@ namespace NumSystemConverter
 {
     class BinConv : Converter
     {
-        public BinConv()
+        public BinConv(TextView t1, TextView t2, TextView t3, TextView t4, double numberToConvert)
         {
-
+            t1.Text = string.Format("CHUJ");
         }
     }
 }

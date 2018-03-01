@@ -14,7 +14,7 @@ namespace NumSystemConverter
 {
     class HexConv:Converter
     {
-        public HexConv()
+        public HexConv(TextView t1, TextView t2, TextView t3, TextView t4, double numberToConvert)
         {
 
         }
