@@ -1,20 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayout1">
     <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="157.0dp"
-        android:layout_height="35.5dp"
-        android:id="@+id/textView1"
-        android:layout_marginLeft="0.0dp"
-        android:layout_marginRight="0.0dp" />
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
+        android:id="@+id/text"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
-</LinearLayout>
+        android:padding="16dp"
+        android:text="Podaj liczbę" />
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/text"
+        android:hint="Number"
+        android:padding="16dp" />
+    <Button
+        android:id="@+id/scorebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="count"
+        android:padding="16dp"
+        android:layout_below="@+id/number" />
+    <TextView
+        android:id="@+id/textBin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33.5dp"
+        android:text="Binarnie:"
+        android:padding="16dp"
+        android:layout_below="@+id/scorebutton"
+        android:textColor="@android:color/white"
+        android:textSize="15dp" />
+    <TextView
+        android:id="@+id/textBinScore"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33.5dp"
+        android:text="WynikBin"
+        android:padding="16dp"
+        android:layout_below="@+id/scorebutton"
+        android:layout_toRightOf="@+id/textBin"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:layout_marginLeft="51.0dp" />
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:id="@+id/textDec"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dp"
+        android:padding="16dp"
+        android:text="Dziesiętnie:"
+        android:layout_below="@+id/textBin" />
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:id="@+id/textDecScore"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dp"
+        android:text="WynikDzies"
+        android:padding="16dp"
+        android:layout_below="@+id/textBin"
+        android:layout_toRightOf="@+id/textDec" />
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:id="@+id/textHex"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dp"
+        android:padding="16dp"
+        android:text="Hexadecymalnie:"
+        android:layout_below="@+id/textDec" />
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:id="@+id/textHexScore"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dp"
+        android:text="WynikHex"
+        android:padding="16dp"
+        android:layout_below="@+id/textDec"
+        android:layout_toRightOf="@+id/textHex" />
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:id="@+id/textOct"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dp"
+        android:padding="16dp"
+        android:text="Oktagonalnie:"
+        android:layout_below="@+id/textHex" />
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:id="@+id/textHexScore"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dp"
+        android:text="WynikOct"
+        android:padding="16dp"
+        android:layout_below="@+id/textHex"
+        android:layout_toRightOf="@+id/textOct" />
+</RelativeLayout>

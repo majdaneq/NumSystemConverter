@@ -41,14 +41,57 @@ namespace NumSystemConverter
 			}
 		}
 		
-		public partial class Id
+		public partial class Color
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int textView1 = 2130968576;
+			public const int theme_devicedefault_background = 2130968576;
 			
-			// aapt resource value: 0x7f040001
-			public const int textView2 = 2130968577;
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f060002
+			public const int number = 2131099650;
+			
+			// aapt resource value: 0x7f060000
+			public const int relativeLayout1 = 2131099648;
+			
+			// aapt resource value: 0x7f060003
+			public const int scorebutton = 2131099651;
+			
+			// aapt resource value: 0x7f060001
+			public const int text = 2131099649;
+			
+			// aapt resource value: 0x7f060004
+			public const int textBin = 2131099652;
+			
+			// aapt resource value: 0x7f060005
+			public const int textBinScore = 2131099653;
+			
+			// aapt resource value: 0x7f060006
+			public const int textDec = 2131099654;
+			
+			// aapt resource value: 0x7f060007
+			public const int textDecScore = 2131099655;
+			
+			// aapt resource value: 0x7f060008
+			public const int textHex = 2131099656;
+			
+			// aapt resource value: 0x7f060009
+			public const int textHexScore = 2131099657;
+			
+			// aapt resource value: 0x7f06000a
+			public const int textOct = 2131099658;
 			
 			static Id()
 			{
@@ -88,6 +131,22 @@ namespace NumSystemConverter
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int Theme_Custom = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}
