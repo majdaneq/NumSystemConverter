@@ -215,7 +215,7 @@ namespace NumSystemConverter
             string var;
                 switch(decision)
             {
-                case 1: return setTab(varResult);
+                case 1: return setTab(varResultHex);
 
                 case 2:
                     res = setTab(varResult1);
