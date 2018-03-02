@@ -72,6 +72,10 @@ namespace NumSystemConverter
             {
                 
                 HexConv hexConv = new HexConv(t1, t2, t3, t4, numberToConvert);
+                txtBin.Text = string.Format(hexConv.HexToBin());
+                txtHex.Text = string.Format(Convert.ToString(numberToConvert));
+                txtDec.Text = string.Format(hexConv.HexToDec());
+                txtOct.Text = string.Format(hexConv.HexToOct());
                  return true;
             }
 
