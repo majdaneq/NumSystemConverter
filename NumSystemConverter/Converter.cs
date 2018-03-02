@@ -45,8 +45,11 @@ namespace NumSystemConverter
         {   
             if (b1.Checked==true)                                   //binary input
             {
-               // tx1.Text = string.Format("CHUJ");
                 BinConv binConv = new BinConv(t1,t2,t3,t4,numberToConvert);
+                txtBin.Text = string.Format(Convert.ToString(numberToConvert));
+                txtOct.Text = string.Format(binConv.BinToOct());
+                txtHex.Text = string.Format(binConv.BinToHex());
+                txtDec.Text = string.Format(binConv.BinToDec());                
                 return true;
             }
             if (b2.Checked==true)                                   //oct input
@@ -59,7 +62,7 @@ namespace NumSystemConverter
             {                
                 DecConv decConv = new DecConv(t1, t2, t3, t4, numberToConvert);
 
-                txtBin.Text=string.Format(decConv.DecToBin());
+                txtBin.Text=  string.Format(decConv.DecToBin());
                 txtDec.Text = string.Format(Convert.ToString(numberToConvert));
                 txtHex.Text = string.Format(decConv.DecToHex());
                 txtOct.Text = string.Format(decConv.DecToOct());
