@@ -13,7 +13,7 @@ using Android.Widget;
 namespace NumSystemConverter
 {
     class BinConv : Converter
-    {   BinConv()
+    {   public BinConv()
         {
 
         }
@@ -35,8 +35,12 @@ namespace NumSystemConverter
 
         }
 
-        public string BinToDec()                                        //10 bit res
+        public string BinToDec(double _convert)                                        //10 bit res
         {
+            convert = _convert;
+            varResult = Convert.ToString(convert); 
+
+
             double x = 10.0;
             var digits = new List<int>();                               //conversion to int array           
             for (int n = Convert.ToInt32(convert); n != 0; n /= 10)
@@ -153,9 +157,12 @@ namespace NumSystemConverter
 
             return "ERROR";
         }
-           
-        public string BinToHex()                    //16bit
+
+        public string BinToHex(double _convert)                    //16bit
         {
+            convert = _convert;
+            varResult = Convert.ToString(convert);
+
             string varResultHex = varResult;
             switch (varResultHex.Length % 4)                                       //making a 4*digit 
             {

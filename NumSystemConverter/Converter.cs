@@ -48,14 +48,18 @@ namespace NumSystemConverter
                 BinConv binConv = new BinConv(t1,t2,t3,t4,numberToConvert);
                 txtBin.Text = string.Format(Convert.ToString(numberToConvert));
                 txtOct.Text = string.Format(binConv.BinToOct());
-                txtHex.Text = string.Format(binConv.BinToHex());
-                txtDec.Text = string.Format(binConv.BinToDec());                
+                txtHex.Text = string.Format(binConv.BinToHex(numberToConvert));
+                txtDec.Text = string.Format(binConv.BinToDec(numberToConvert));                
                 return true;
             }
             if (b2.Checked==true)                                   //oct input
             {
                 
                 OctConv octConv = new OctConv(t1, t2, t3, t4, numberToConvert);
+                txtBin.Text = string.Format(octConv.OctToBin());
+                txtOct.Text = string.Format(Convert.ToString(numberToConvert));
+                txtDec.Text = string.Format(octConv.OctToDec());
+                txtHex.Text = string.Format(octConv.OctToHex());
                 return true;
             }
             if (b3.Checked==true)                                   //decimal input
