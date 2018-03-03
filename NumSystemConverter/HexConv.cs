@@ -22,12 +22,12 @@ namespace NumSystemConverter
         string varResult;
         string res;
         string binaryresult;
-        public HexConv(TextView t1, TextView t2, TextView t3, TextView t4, double numberToConvert)
+        public HexConv(TextView t1, TextView t2, TextView t3, TextView t4, string _number)
         {
             txtBin = t1;
             txtDec = t3;
             txtOct = t2;
-            varResult = Convert.ToString(numberToConvert);
+            varResult = _number;
         }
 
         public string HexToBin()

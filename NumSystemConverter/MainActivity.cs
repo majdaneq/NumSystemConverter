@@ -32,6 +32,7 @@ namespace NumSystemConverter
             base.OnCreate(savedInstanceState);
            
             SetContentView(Resource.Layout.Main);
+
             #region attribution
             buttonCount = FindViewById<Button>(Resource.Id.scorebutton);
             number = FindViewById<EditText>(Resource.Id.number);
@@ -54,7 +55,7 @@ namespace NumSystemConverter
                delegate
                {
                    Converter convert = new Converter(number.Text, InBin, InOct, InDec, InHex, textBinScore, textOctScore, textDecScore, textHexScore);                        //string to convert   
-                                   
+                   if (!convert.done) Toast.MakeText(this, "Wprowadź poprawną liczbę", ToastLength.Long).Show();                                        
                };
         }
     }

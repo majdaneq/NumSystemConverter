@@ -18,7 +18,8 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/init"
         android:hint="Number"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:inputType="none" />
     <Button
         android:id="@+id/scorebutton"
         android:layout_width="match_parent"
