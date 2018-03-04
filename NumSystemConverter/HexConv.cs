@@ -15,10 +15,6 @@ namespace NumSystemConverter
     class HexConv : Converter
     {
         TextView txtDec, txtBin, txtOct;
-        double convert;
-        double result = 0;
-        string finalresult;
-        double varRes = 0;
         string varResult;
         string res;
         string binaryresult;
@@ -323,7 +319,8 @@ namespace NumSystemConverter
 
             return "ERROR";
         }
-            string setTabOct(string varResult)
+
+        string setTabOct(string varResult)
         {
             switch (varResult)
             {

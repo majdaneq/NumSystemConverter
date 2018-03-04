@@ -55,7 +55,8 @@ namespace NumSystemConverter
                delegate
                {
                    Converter convert = new Converter(number.Text, InBin, InOct, InDec, InHex, textBinScore, textOctScore, textDecScore, textHexScore);                        //string to convert   
-                   if (!convert.done) Toast.MakeText(this, "Wprowadź poprawną liczbę", ToastLength.Long).Show();                                        
+                   if (!convert.done) Toast.MakeText(this, "Wprowadź poprawną liczbę", ToastLength.Long).Show();
+                   
                };
         }
     }

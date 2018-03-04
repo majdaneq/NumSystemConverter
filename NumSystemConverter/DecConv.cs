@@ -16,14 +16,23 @@ namespace NumSystemConverter
     {   private int[] binScore=new int[10];
         private int binVar;
         double numConv;
+        public string Message="";
         double scorevar;
         double score;
         int i = 0;
         
         public DecConv(TextView t1, TextView t2, TextView t3, TextView t4, double numberToConvert)
         {
-            numConv = numberToConvert;
-        }
+            try
+            {
+                numConv = numberToConvert;
+            }
+
+            catch
+            {
+                Message = "Liczba za duża!";
+            }
+        } 
 
         public string DecToBin()
         {

@@ -25,32 +25,26 @@ namespace NumSystemConverter
         string varResult;
         string res;
 
-        public BinConv(TextView t1, TextView t2, TextView t3, TextView t4, double numberToConvert)
+        public BinConv(TextView t1, TextView t2, TextView t3, TextView t4, string numberToConvert)
         {
             txtDec = t3;
             txtHex = t4;
-            txtOct = t2;
-            convert = numberToConvert;
-            varResult = Convert.ToString(convert);
-
+            txtOct = t2;            
+            varResult = numberToConvert; 
         }
 
         public string BinToDec(double _convert)                                        //10 bit res
         {
-            convert = _convert;
-            varResult = Convert.ToString(convert); 
-
-
-            double x = 10.0;
-            var digits = new List<int>();                               //conversion to int array           
-            for (int n = Convert.ToInt32(convert); n != 0; n /= 10)
-                digits.Add(Convert.ToInt32(n % x));
+            var digits = new List<char>();                               //conversion to int array           
+            for (int n = varResult.Length - 1; n >= 0; n--)
+                digits.Add(varResult[n]);
             var arr = digits.ToArray();
             Array.Reverse(arr);
             int m = 0;
+
             for (int i = varResult.Length - 1; i >= 0; i--)
             {
-                varRes = arr[i] * Convert.ToInt32(Math.Pow(2, m));
+                varRes = Convert.ToInt32(new string(arr[i], 1)) * Convert.ToInt32(Math.Pow(2, m));
                 convert = convert % 10;
                 m++;
                 result += varRes;
@@ -69,14 +63,12 @@ namespace NumSystemConverter
                 case 1:
                     varResultOct = varResultOct.Insert(0, "00"); break;
                 case 2:
-                    varResultOct = varResultOct.Insert(0, "0"); break;
-                
+                    varResultOct = varResultOct.Insert(0, "0"); break;                
             }
 
             //check how long is the binary number
 
-            int divider = varResultOct.Length / 3;
-            short decision = 0;
+            int divider = varResultOct.Length / 3;           
             string varResult1 = "";
             string varResult2 = "";
             string varResult3 = "";
@@ -85,82 +77,35 @@ namespace NumSystemConverter
             string varResult6 = "";
             // dividing string into 4 elements arrays 
             int i = 0;
+            string var;
+
             switch (divider)
             {
                 case 0: return "ERROR";
 
-                case 1: decision = 1; break;
-                case 2:
-                    while (i < 3)
-                    {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        decision = 2;
-                        i++;
-                    }
-                    break;
-                case 3:
-                    while (i < 3)
-                    {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
-                        decision = 3;
-                        i++;
-                    }
-                    break;
-                case 4:
-                    while (i < 3)
-                    {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
-                        varResult4 += varResultOct[i + 9];    //backbackback
-                        decision = 4;
-                        i++;
-                    }
-                    break;
-                case 5:
-                    while (i < 3)
-                    {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
-                        varResult4 += varResultOct[i + 9];    //backbackback
-                        varResult5 += varResultOct[i + 12];    //backbackback
-                        decision = 5;
-                        i++;
-                    }
-                    break;
-                case 6:
-                    while (i < 3)
-                    {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
-                        varResult4 += varResultOct[i + 9];    //backbackback
-                        varResult5 += varResultOct[i + 12];    //backbackback
-                        varResult6 += varResultOct[i + 15];
-                        decision = 6;
-                        i++;
-                    }
-                    break;
-            }
-
-
-            string var;
-            switch (decision)
-            {
                 case 1: return setTabOct(varResultOct);
-
                 case 2:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        
+                        i++;
+                    }
+                        res = setTabOct(varResult1);
+                        var = res;
+                        res = setTabOct(varResult2);
+                        var += res;
                     return var;
-
                 case 3:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        
+                        i++;
+                    }
                     res = setTabOct(varResult1);
                     var = res;
                     res = setTabOct(varResult2);
@@ -168,8 +113,16 @@ namespace NumSystemConverter
                     res = setTabOct(varResult3);
                     var += res;
                     return var;
-
                 case 4:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        
+                        i++;
+                    }
                     res = setTabOct(varResult1);
                     var = res;
                     res = setTabOct(varResult2);
@@ -179,8 +132,17 @@ namespace NumSystemConverter
                     res = setTabOct(varResult4);
                     var += res;
                     return var;
-
                 case 5:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];    //backbackback
+                        
+                        i++;
+                    }
                     res = setTabOct(varResult1);
                     var = res;
                     res = setTabOct(varResult2);
@@ -192,8 +154,18 @@ namespace NumSystemConverter
                     res = setTabOct(varResult5);
                     var += res;
                     return var;
-
                 case 6:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];    //backbackback
+                        varResult6 += varResultOct[i + 15];
+                        
+                        i++;
+                    }
                     res = setTabOct(varResult1);
                     var = res;
                     res = setTabOct(varResult2);
@@ -207,16 +179,16 @@ namespace NumSystemConverter
                     res = setTabOct(varResult6);
                     var += res;
                     return var;
-            }
 
-
-            return "ERROR";
+                default: return "ERROR";
+                    
+            }  
         }
 
         public string BinToHex(double _convert)                    //16bit
         {
-            convert = _convert;
-            varResult = Convert.ToString(convert);
+            //convert = _convert;
+           // varResult = Convert.ToString(convert);
 
             string varResultHex = varResult;
             switch (varResultHex.Length % 4)                                       //making a 4*digit 
@@ -241,11 +213,12 @@ namespace NumSystemConverter
             string varResult6 = "";
             // dividing string into 4 elements arrays 
             int i = 0;
+            string var;
                 switch (divider)
             {
                 case 0: return "ERROR";
 
-                case 1: decision = 1; break;
+                case 1: return setTab(varResultHex);
                 case 2:
                     while (i< 4)
                         {
@@ -254,7 +227,12 @@ namespace NumSystemConverter
                         decision = 2;
                         i++;
                         }
-                    break;
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    return var;
+                    
                 case 3:
                     while (i < 4)
                     {
@@ -264,7 +242,14 @@ namespace NumSystemConverter
                         decision = 3;
                         i++;
                     }
-                    break;
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    res = setTab(varResult3);
+                    var += res;
+                    return var;
+                    
                 case 4:
                     while (i < 4)
                     {
@@ -275,7 +260,16 @@ namespace NumSystemConverter
                         decision = 4;
                         i++;
                     }
-                    break;
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    res = setTab(varResult3);
+                    var += res;
+                    res = setTab(varResult4);
+                    var += res;
+                    return var;
+                    
                 case 5:
                     while (i < 4)
                     {
@@ -287,54 +281,6 @@ namespace NumSystemConverter
                         decision = 5;
                         i++;
                     }
-                    break;
-                case 6:
-                    while (i < 4)
-                    {
-                        varResult1 += varResultHex[i];         //front
-                        varResult2 += varResultHex[i + 4];     //back
-                        varResult3 += varResultHex[i + 8];     //backback
-                        varResult4 += varResultHex[i + 12];    //backbackback
-                        varResult5 += varResultHex[i + 16];    //backbackback
-                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
-                        i++;
-                    }
-                    break;
-            }
-
-
-            string var;
-                switch(decision)
-            {
-                case 1: return setTab(varResultHex);
-
-                case 2:
-                    res = setTab(varResult1);
-                    var = res;
-                    res = setTab(varResult2);
-                    var += res;
-                    return var;
-
-                case 3:
-                    res = setTab(varResult1);
-                    var = res;
-                    res = setTab(varResult2);
-                    var += res;
-                    res = setTab(varResult3);
-                    var += res;
-                    return var;
-
-                case 4:
-                    res = setTab(varResult1);
-                    var = res;
-                    res = setTab(varResult2);
-                    var += res;
-                    res = setTab(varResult3);
-                    var += res;
-                    res = setTab(varResult4);
-                    var += res;
-                    return var;
-                case 5:
                     res = setTab(varResult1);
                     var = res;
                     res = setTab(varResult2);
@@ -347,6 +293,16 @@ namespace NumSystemConverter
                     var += res;
                     return var;
                 case 6:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        i++;
+                    }
                     res = setTab(varResult1);
                     var = res;
                     res = setTab(varResult2);
@@ -360,10 +316,8 @@ namespace NumSystemConverter
                     res = setTab(varResult6);
                     var += res;
                     return var;
-            }    
-                
-
-            return "ERROR";
+                default: return "ERROR";
+            }
         }
 
         string setTab(string varResult)

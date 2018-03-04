@@ -34,8 +34,7 @@ namespace NumSystemConverter
             txtHex = t4;
                 try
                 {
-                    number = _number;
-                   // numberToConvert = Convert.ToDouble(_number);                
+                    number = _number;                               
                     RadioCheck(b1,b2,b3,b4,t1,t2,t3,t4);
                 }
                 catch
@@ -54,7 +53,7 @@ namespace NumSystemConverter
                 done = checkInput(possibilities);
                 if (!done) return false;
 
-                BinConv binConv = new BinConv(t1,t2,t3,t4,numberToConvert);
+                BinConv binConv = new BinConv(t1,t2,t3,t4,number);
                 txtBin.Text = string.Format(number);
                 txtOct.Text = string.Format(binConv.BinToOct());
                 txtHex.Text = string.Format(binConv.BinToHex(numberToConvert));
@@ -85,8 +84,9 @@ namespace NumSystemConverter
                 done = checkInput(possibilities);
                 if (!done) return false;
 
+                
                 DecConv decConv = new DecConv(t1, t2, t3, t4, numberToConvert);
-
+                
                 txtBin.Text=  string.Format(decConv.DecToBin());
                 txtDec.Text = string.Format(number);
                 txtHex.Text = string.Format(decConv.DecToHex());
