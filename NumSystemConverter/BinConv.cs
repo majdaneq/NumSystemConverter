@@ -81,6 +81,8 @@ namespace NumSystemConverter
             string varResult2 = "";
             string varResult3 = "";
             string varResult4 = "";
+            string varResult5 = "";
+            string varResult6 = "";
             // dividing string into 4 elements arrays 
             int i = 0;
             switch (divider)
@@ -118,6 +120,31 @@ namespace NumSystemConverter
                         i++;
                     }
                     break;
+                case 5:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];    //backbackback
+                        decision = 5;
+                        i++;
+                    }
+                    break;
+                case 6:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];    //backbackback
+                        varResult6 += varResultOct[i + 15];
+                        decision = 6;
+                        i++;
+                    }
+                    break;
             }
 
 
@@ -152,6 +179,34 @@ namespace NumSystemConverter
                     res = setTabOct(varResult4);
                     var += res;
                     return var;
+
+                case 5:
+                    res = setTabOct(varResult1);
+                    var = res;
+                    res = setTabOct(varResult2);
+                    var += res;
+                    res = setTabOct(varResult3);
+                    var += res;
+                    res = setTabOct(varResult4);
+                    var += res;
+                    res = setTabOct(varResult5);
+                    var += res;
+                    return var;
+
+                case 6:
+                    res = setTabOct(varResult1);
+                    var = res;
+                    res = setTabOct(varResult2);
+                    var += res;
+                    res = setTabOct(varResult3);
+                    var += res;
+                    res = setTabOct(varResult4);
+                    var += res;
+                    res = setTabOct(varResult5);
+                    var += res;
+                    res = setTabOct(varResult6);
+                    var += res;
+                    return var;
             }
 
 
@@ -182,6 +237,8 @@ namespace NumSystemConverter
             string varResult2="";
             string varResult3 = "";
             string varResult4 = "";
+            string varResult5 = "";
+            string varResult6 = "";
             // dividing string into 4 elements arrays 
             int i = 0;
                 switch (divider)
@@ -219,6 +276,30 @@ namespace NumSystemConverter
                         i++;
                     }
                     break;
+                case 5:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        decision = 5;
+                        i++;
+                    }
+                    break;
+                case 6:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        i++;
+                    }
+                    break;
             }
 
 
@@ -251,6 +332,32 @@ namespace NumSystemConverter
                     res = setTab(varResult3);
                     var += res;
                     res = setTab(varResult4);
+                    var += res;
+                    return var;
+                case 5:
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    res = setTab(varResult3);
+                    var += res;
+                    res = setTab(varResult4);
+                    var += res;
+                    res = setTab(varResult5);
+                    var += res;
+                    return var;
+                case 6:
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    res = setTab(varResult3);
+                    var += res;
+                    res = setTab(varResult4);
+                    var += res;
+                    res = setTab(varResult5);
+                    var += res;
+                    res = setTab(varResult6);
                     var += res;
                     return var;
             }    

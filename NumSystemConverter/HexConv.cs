@@ -126,6 +126,10 @@ namespace NumSystemConverter
             string varResult2 = "";
             string varResult3 = "";
             string varResult4 = "";
+            string varResult5 = "";
+            string varResult6 = "";
+            string varResult7 = "";
+            string varResult8 = "";
             // dividing string into 4 elements arrays 
             int i = 0;
             switch (divider)
@@ -163,6 +167,62 @@ namespace NumSystemConverter
                         i++;
                     }
                     break;
+                case 5:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];    //backbackback
+                        decision = 5;
+                        i++;
+                    }
+                    break;
+                case 6:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        decision = 6;
+                        i++;
+                    }
+                    break;
+                case 7:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                       
+                        decision = 7;
+                        i++;
+                    }
+                    break;
+                case 8:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        decision = 7;
+                        i++;
+                    }
+                    break;
             }
 
 
@@ -195,6 +255,67 @@ namespace NumSystemConverter
                     res = setTabOct(varResult3);
                     var += res;
                     res = setTabOct(varResult4);
+                    var += res;
+                    return var;
+                case 5:
+                    res = setTabOct(varResult1);
+                    var = res;
+                    res = setTabOct(varResult2);
+                    var += res;
+                    res = setTabOct(varResult3);
+                    var += res;
+                    res = setTabOct(varResult4);
+                    var += res;
+                    res = setTabOct(varResult5);
+                    var += res;
+                   
+                    return var;
+                case 6:
+                    res = setTabOct(varResult1);
+                    var = res;
+                    res = setTabOct(varResult2);
+                    var += res;
+                    res = setTabOct(varResult3);
+                    var += res;
+                    res = setTabOct(varResult4);
+                    var += res;
+                    res = setTabOct(varResult5);
+                    var += res;
+                    res = setTabOct(varResult6);
+                    var += res;
+                    return var;
+                case 7:
+                    res = setTabOct(varResult1);
+                    var = res;
+                    res = setTabOct(varResult2);
+                    var += res;
+                    res = setTabOct(varResult3);
+                    var += res;
+                    res = setTabOct(varResult4);
+                    var += res;
+                    res = setTabOct(varResult5);
+                    var += res;
+                    res = setTabOct(varResult6);
+                    var += res;
+                    res = setTabOct(varResult7);
+                    var += res;
+                    return var;
+                case 8:
+                    res = setTabOct(varResult1);
+                    var = res;
+                    res = setTabOct(varResult2);
+                    var += res;
+                    res = setTabOct(varResult3);
+                    var += res;
+                    res = setTabOct(varResult4);
+                    var += res;
+                    res = setTabOct(varResult5);
+                    var += res;
+                    res = setTabOct(varResult6);
+                    var += res;
+                    res = setTabOct(varResult7);
+                    var += res;
+                    res = setTabOct(varResult8);
                     var += res;
                     return var;
             }
