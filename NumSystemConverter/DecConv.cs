@@ -13,13 +13,13 @@ using Android.Widget;
 namespace NumSystemConverter
 {
     class DecConv : Converter
-    {   private int[] binScore=new int[10];
-        private int binVar;
+    {   private long[] binScore=new long[20];
+        private long binVar;
         double numConv;
         public string Message="";
         double scorevar;
         double score;
-        int i = 0;
+      
         
         public DecConv(TextView t1, TextView t2, TextView t3, TextView t4, double numberToConvert)
         {
@@ -35,19 +35,20 @@ namespace NumSystemConverter
         } 
 
         public string DecToBin()
-        {
-           binVar = Convert.ToInt32(numConv);
-
-            while(i<10)
-            { 
-                binScore[i] = binVar % 2;
-                binVar /= 2;
+        {          
+            long binx = Convert.ToInt64(numConv);
+            int i = 0;
+            while(i<20)
+            {
+                binScore[i] = binx % 2;
+                binx /= 2;
+              
                 i++;
             }  
-            int j = 1;
-            for(int i=0;i<10;i++)
+            double j = 1;
+            for(int k=0;k<20;k++)
             {
-                scorevar = binScore[i] * j;
+                scorevar = binScore[k] * j;
                 score += scorevar;
                 j *= 10;                
             }
@@ -58,9 +59,10 @@ namespace NumSystemConverter
         public string DecToHex()
         {
             int i = 0;
-            binVar = Convert.ToInt32(numConv);
-            string[] HexScore = new string[10];
-            while (i < 10)
+            binVar = Convert.ToInt64(numConv);
+            string hej = Convert.ToString(binVar);
+            string[] HexScore = new string[hej.Length];
+            while (i < hej.Length)
             {
                 binScore[i] = binVar % 16;
                 switch (binScore[i])
@@ -131,9 +133,10 @@ namespace NumSystemConverter
         public string DecToOct()
         {
             int i = 0;
-            binVar = Convert.ToInt32(numConv);
-            string[] HexScore = new string[10];
-            while (i < 10)
+            binVar = Convert.ToInt64(numConv);
+            string hej = Convert.ToString(binVar);
+            string[] HexScore = new string[hej.Length];
+            while (i < hej.Length)
             {
                 binScore[i] = binVar % 8;
                 switch (binScore[i])

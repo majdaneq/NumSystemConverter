@@ -86,6 +86,10 @@ namespace NumSystemConverter
             string varResult7 = "";
             string varResult8 = "";
             string varResult9 = "";
+            string varResult10 = "";
+            string varResult11 = "";
+            string varResult12 = "";
+            string varResult13 = "";
             // dividing string into 4 elements arrays 
             int i = 0;
             switch (divider)
@@ -193,10 +197,108 @@ namespace NumSystemConverter
                         i++;
                     }
                     break;
+                case 10:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        varResult7 += varResultHex[i + 24];    //backbackback      
+                        varResult8 += varResultHex[i + 28];    //backbackback 
+                        varResult9 += varResultHex[i + 32];    //backbackback   
+                        varResult10 += varResultHex[i + 36];    //backbackback  
+                        decision = 10;
+                        i++;
+                    }
+                    break;
+                case 11:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        varResult7 += varResultHex[i + 24];    //backbackback      
+                        varResult8 += varResultHex[i + 28];    //backbackback 
+                        varResult9 += varResultHex[i + 32];    //backbackback  
+                        varResult10 += varResultHex[i + 36];    //backbackback
+                        varResult11 += varResultHex[i + 40];    //backbackback  
+                        decision = 11;
+                        i++;
+                    }
+                    break;
+                case 12:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        varResult7 += varResultHex[i + 24];    //backbackback      
+                        varResult8 += varResultHex[i + 28];    //backbackback 
+                        varResult9 += varResultHex[i + 32];    //backbackback  
+                        varResult10 += varResultHex[i + 36];    //backbackback
+                        varResult11 += varResultHex[i + 40];    //backbackback  
+                        varResult12 += varResultHex[i + 44];    //backbackback  
+                        decision = 12;
+                        i++;
+                    }
+                    break;
+                case 13:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        varResult7 += varResultHex[i + 24];    //backbackback      
+                        varResult8 += varResultHex[i + 28];    //backbackback 
+                        varResult9 += varResultHex[i + 32];    //backbackback   
+                        varResult10 += varResultHex[i + 36];    //backbackback
+                        varResult11 += varResultHex[i + 40];    //backbackback  
+                        varResult12 += varResultHex[i + 44];    //backbackback  
+                        varResult13 += varResultHex[i + 48];    //backbackback  
+                        decision = 13;
+                        i++;
+                    }
+                    break;
             }
 
 
-            string var;
+            List<string> varRes = new List<string>();
+            varRes.Add(varResult1);
+            varRes.Add(varResult2);
+            varRes.Add(varResult3);
+            varRes.Add(varResult4);
+            varRes.Add(varResult5);
+            varRes.Add(varResult6);
+            varRes.Add(varResult7);
+            varRes.Add(varResult8);
+            varRes.Add(varResult9);
+            varRes.Add(varResult10);
+            varRes.Add(varResult11);
+            varRes.Add(varResult12);
+            varRes.Add(varResult13);
+
+
+            string var="";
+
+            for (int l = 0; l < decision; l++)
+            {
+                var += setTab(varRes[l]);
+            }
+            return var;
+
+
             switch (decision)
             {
                 case 1: return setTab(varResultHex);
@@ -321,16 +423,17 @@ namespace NumSystemConverter
             var arr = digits.ToArray();
             Array.Reverse(arr);
             int m = 0;
-
+            long  res=0;
             for (int i = varResult.Length - 1; i >= 0; i--)
             {
-                varRes = Convert.ToInt32(new string(arr[i],1)) * Convert.ToInt32(Math.Pow(2, m));
+                varRes = Convert.ToInt64(new string(arr[i],1)) * Convert.ToInt64(Math.Pow(2, m));
                 convert = convert % 10;
                 m++;
-                result += varRes;
+               // result += varRes;
+                res += Convert.ToInt64(varRes);
             }
 
-            finalresult = Convert.ToString(result);
+            finalresult = Convert.ToString(res);
 
             return finalresult;
         }
