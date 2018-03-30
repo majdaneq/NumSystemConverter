@@ -49,6 +49,7 @@ namespace NumSystemConverter
             if (b1.Checked==true)                                   //binary input
             {
                 numberToConvert = Convert.ToDouble(number);
+
                 string possibilities = "01";
                 done = checkInput(possibilities);
                 if (!done) return false;
@@ -64,6 +65,7 @@ namespace NumSystemConverter
             if (b2.Checked==true)                                   //oct input
             {
                 numberToConvert = Convert.ToDouble(number);
+
                 string possibilities = "01234567";
                 done = checkInput(possibilities);
                 if (!done) return false;
@@ -71,7 +73,6 @@ namespace NumSystemConverter
                 OctConv octConv = new OctConv(t1, t2, t3, t4, numberToConvert);
                 txtBin.Text = string.Format(octConv.OctToBin());
                 txtHex.Text = string.Format(octConv.OctToHex());
-
                 txtOct.Text = string.Format(number);
                 txtDec.Text = string.Format(octConv.OctToDec());                
                                
@@ -111,19 +112,20 @@ namespace NumSystemConverter
 
         bool checkInput(string possibilities)
         {
-            bool correct = false ;
+         
+            int ssi = 0;
 
             for (int i = 0; i < number.Length; i++)
             {
                 for (int j = 0; j < possibilities.Length; j++)
                 {
                     if (number[i] == possibilities[j])
-                    {
-                        correct = true;
-                    }
+                    {     ssi++;
+                    }                    
                 }
+                
             }
-            if (!correct) return false;
+            if (ssi!=number.Length) return false;
             else return true;
         }
        

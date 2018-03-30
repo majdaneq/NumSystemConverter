@@ -126,6 +126,21 @@ namespace NumSystemConverter
             string varResult6 = "";
             string varResult7 = "";
             string varResult8 = "";
+            string varResult9 = "";
+            string varResult10 = "";
+            string varResult11= "";
+            string varResult12 = "";
+            string varResult13 = "";
+            string varResult14 = "";
+            string varResult15 = "";
+            string varResult16 = "";
+            string varResult17 = "";
+            string varResult18 = "";
+            string varResult19 = "";
+            string varResult20 = "";            
+
+           
+
             // dividing string into 4 elements arrays 
             int i = 0;
             switch (divider)
@@ -211,113 +226,301 @@ namespace NumSystemConverter
                         varResult3 += varResultOct[i + 6];     //backback
                         varResult4 += varResultOct[i + 9];    //backbackback
                         varResult5 += varResultOct[i + 12];     //backback
-
                         varResult6 += varResultOct[i + 15];    //backbackback
                         varResult7 += varResultOct[i + 18];     //backback
                         varResult8 += varResultOct[i + 21];    //backbackback
-                        decision = 7;
+                        decision = 8;
+                        i++;
+                    }
+                    break;
+                case 9:
+                    while (i < 3)
+                    {   varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        decision = 9;
+                        i++;
+                    }
+                    break;
+                case 10:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback
+                        decision = 10;
+                        i++;
+                    }
+                    break;
+                case 11:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        decision = 11;
+                        i++;
+                    }
+                    break;
+                case 12:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        decision = 12;
+                        i++;
+                    }
+                    break;
+                case 13:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        decision = 13;
+                        i++;
+                    }
+                    break;
+                case 14:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        varResult14 += varResultOct[i + 39];    //backbackback
+                        decision = 14;
+                        i++;
+                    }
+                    break;
+                case 15:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        varResult14 += varResultOct[i + 39];    //backbackback
+                        varResult15 += varResultOct[i + 42];    //backbackback
+                        decision = 15;
+                        i++;
+                    }
+                    break;
+                case 16:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        varResult14 += varResultOct[i + 39];    //backbackback
+                        varResult15 += varResultOct[i + 42];    //backbackback
+                        varResult16 += varResultOct[i + 45];    //backbackback
+                        decision = 16;
+                        i++;
+                    }
+                    break;
+                case 17:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        varResult14 += varResultOct[i + 39];    //backbackback
+                        varResult15 += varResultOct[i + 42];    //backbackback                       
+                        varResult16 += varResultOct[i + 45];    //backbackback
+                        varResult17 += varResultOct[i + 48];    //backbackback
+                        decision = 17;
+                        i++;
+                    }
+                    break;
+                case 18:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        varResult14 += varResultOct[i + 39];    //backbackback
+                        varResult15 += varResultOct[i + 42];    //backbackback
+                        varResult16 += varResultOct[i + 45];    //backbackback
+                        varResult17 += varResultOct[i + 48];    //backbackback
+                        varResult18 += varResultOct[i + 51];    //backbackback
+                       
+                        decision = 18;
+                        i++;
+                    }
+                    break;
+                case 19:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        varResult14 += varResultOct[i + 39];    //backbackback
+                        varResult15 += varResultOct[i + 42];    //backbackback
+                        varResult16 += varResultOct[i + 45];    //backbackback
+                        varResult17 += varResultOct[i + 48];    //backbackback
+                        varResult18 += varResultOct[i + 51];    //backbackback
+                        varResult19 += varResultOct[i + 54];
+                        decision = 19;
+                        i++;
+                    }
+                    break;
+                case 20:
+                    while (i < 3)
+                    {
+                        varResult1 += varResultOct[i];         //front
+                        varResult2 += varResultOct[i + 3];     //back
+                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult5 += varResultOct[i + 12];     //backback
+                        varResult6 += varResultOct[i + 15];    //backbackback
+                        varResult7 += varResultOct[i + 18];     //backback
+                        varResult8 += varResultOct[i + 21];    //backbackback
+                        varResult9 += varResultOct[i + 24];    //backbackback
+                        varResult10 += varResultOct[i + 27];    //backbackback                        
+                        varResult11 += varResultOct[i + 30];    //backbackback
+                        varResult12 += varResultOct[i + 33];    //backbackback
+                        varResult13 += varResultOct[i + 36];    //backbackback
+                        varResult14 += varResultOct[i + 39];    //backbackback
+                        varResult15 += varResultOct[i + 42];    //backbackback
+                        varResult16 += varResultOct[i + 45];    //backbackback
+                        varResult17 += varResultOct[i + 48];    //backbackback
+                        varResult18 += varResultOct[i + 51];    //backbackback
+                        varResult19 += varResultOct[i + 54];
+                        varResult20 += varResultOct[i + 57];
+                        decision = 20;
                         i++;
                     }
                     break;
             }
 
+            List<string> varRes = new List<string>();
+            varRes.Add(varResult1);
+            varRes.Add(varResult2);
+            varRes.Add(varResult3);
+            varRes.Add(varResult4);
+            varRes.Add(varResult5);
+            varRes.Add(varResult6);
+            varRes.Add(varResult7);
+            varRes.Add(varResult8);
+            varRes.Add(varResult9);
+            varRes.Add(varResult10);
+            varRes.Add(varResult11);
+            varRes.Add(varResult12);
+            varRes.Add(varResult13);
+            varRes.Add(varResult14);
+            varRes.Add(varResult15);
+            varRes.Add(varResult16);
+            varRes.Add(varResult17);
+            varRes.Add(varResult18);
+            varRes.Add(varResult19);
+            varRes.Add(varResult20);
+            string var ="";
 
-            string var;
-            switch (decision)
+            for (int l=0;l<decision;l++)
             {
-                case 1: return setTabOct(varResultOct);
-
-                case 2:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
-                    return var;
-
-                case 3:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
-                    res = setTabOct(varResult3);
-                    var += res;
-                    return var;
-
-                case 4:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
-                    res = setTabOct(varResult3);
-                    var += res;
-                    res = setTabOct(varResult4);
-                    var += res;
-                    return var;
-                case 5:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
-                    res = setTabOct(varResult3);
-                    var += res;
-                    res = setTabOct(varResult4);
-                    var += res;
-                    res = setTabOct(varResult5);
-                    var += res;
-                   
-                    return var;
-                case 6:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
-                    res = setTabOct(varResult3);
-                    var += res;
-                    res = setTabOct(varResult4);
-                    var += res;
-                    res = setTabOct(varResult5);
-                    var += res;
-                    res = setTabOct(varResult6);
-                    var += res;
-                    return var;
-                case 7:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
-                    res = setTabOct(varResult3);
-                    var += res;
-                    res = setTabOct(varResult4);
-                    var += res;
-                    res = setTabOct(varResult5);
-                    var += res;
-                    res = setTabOct(varResult6);
-                    var += res;
-                    res = setTabOct(varResult7);
-                    var += res;
-                    return var;
-                case 8:
-                    res = setTabOct(varResult1);
-                    var = res;
-                    res = setTabOct(varResult2);
-                    var += res;
-                    res = setTabOct(varResult3);
-                    var += res;
-                    res = setTabOct(varResult4);
-                    var += res;
-                    res = setTabOct(varResult5);
-                    var += res;
-                    res = setTabOct(varResult6);
-                    var += res;
-                    res = setTabOct(varResult7);
-                    var += res;
-                    res = setTabOct(varResult8);
-                    var += res;
-                    return var;
+                var += setTabOct(varRes[l]);
             }
-
-
-            return "ERROR";
+            return var;
         }
 
         string setTabOct(string varResult)

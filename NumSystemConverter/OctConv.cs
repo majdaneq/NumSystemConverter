@@ -83,6 +83,9 @@ namespace NumSystemConverter
             string varResult4 = "";
             string varResult5 = "";
             string varResult6 = "";
+            string varResult7 = "";
+            string varResult8 = "";
+            string varResult9 = "";
             // dividing string into 4 elements arrays 
             int i = 0;
             switch (divider)
@@ -141,6 +144,52 @@ namespace NumSystemConverter
                         varResult4 += varResultHex[i + 12];    //backbackback
                         varResult5 += varResultHex[i + 16];    //backbackback
                         varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        decision = 6;
+                        i++;
+                    }
+                    break;
+                case 7:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        varResult7 += varResultHex[i + 24];    //backbackback   
+                        decision = 7;
+                        i++;
+                    }
+                    break;
+                case 8:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        varResult7 += varResultHex[i + 24];    //backbackback      
+                        varResult8 += varResultHex[i + 28];    //backbackback    
+                        decision = 8;
+                        i++;
+                    }
+                    break;
+                case 9:
+                    while (i < 4)
+                    {
+                        varResult1 += varResultHex[i];         //front
+                        varResult2 += varResultHex[i + 4];     //back
+                        varResult3 += varResultHex[i + 8];     //backback
+                        varResult4 += varResultHex[i + 12];    //backbackback
+                        varResult5 += varResultHex[i + 16];    //backbackback
+                        varResult6 += varResultHex[i + 20];    //backbackbackdecision = 6;
+                        varResult7 += varResultHex[i + 24];    //backbackback      
+                        varResult8 += varResultHex[i + 28];    //backbackback 
+                        varResult9 += varResultHex[i + 32];    //backbackback   
+                        decision = 9;
                         i++;
                     }
                     break;
@@ -202,6 +251,60 @@ namespace NumSystemConverter
                     res = setTab(varResult5);
                     var += res;
                     res = setTab(varResult6);
+                    var += res;
+                    return var;
+                case 7:
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    res = setTab(varResult3);
+                    var += res;
+                    res = setTab(varResult4);
+                    var += res;
+                    res = setTab(varResult5);
+                    var += res;
+                    res = setTab(varResult6);
+                    var += res;
+                    res = setTab(varResult7);
+                    var += res;
+                    return var;
+                case 8:
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    res = setTab(varResult3);
+                    var += res;
+                    res = setTab(varResult4);
+                    var += res;
+                    res = setTab(varResult5);
+                    var += res;
+                    res = setTab(varResult6);
+                    var += res;
+                    res = setTab(varResult7);
+                    var += res;
+                    res = setTab(varResult8);
+                    var += res;
+                    return var;
+                case 9:
+                    res = setTab(varResult1);
+                    var = res;
+                    res = setTab(varResult2);
+                    var += res;
+                    res = setTab(varResult3);
+                    var += res;
+                    res = setTab(varResult4);
+                    var += res;
+                    res = setTab(varResult5);
+                    var += res;
+                    res = setTab(varResult6);
+                    var += res;
+                    res = setTab(varResult7);
+                    var += res;
+                    res = setTab(varResult8);
+                    var += res;
+                    res = setTab(varResult9);
                     var += res;
                     return var;
             }
