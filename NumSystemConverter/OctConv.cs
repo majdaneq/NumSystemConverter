@@ -309,15 +309,12 @@ namespace NumSystemConverter
                     return var;
             }
 
-
             return "ERROR";
         }
         public string OctToDec()
         {
 
-            varResult = binaryresult;
-
-            double x = 10.0;
+            varResult = binaryresult;            
             var digits = new List<char>();                               //conversion to int array           
             for (int n = varResult.Length-1; n >= 0; n--)
                 digits.Add(varResult[n]);

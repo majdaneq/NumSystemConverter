@@ -115,8 +115,7 @@ namespace NumSystemConverter
                 }
                 binVar /= 16;
                 i++;
-            }
-            int j = 1;
+            }         
 
             for (int k = 0; k < HexScore.Length / 2; k++)
             {
@@ -124,13 +123,11 @@ namespace NumSystemConverter
                 HexScore[HexScore.Length - 1 - k] = "" + HexScore[k][0];
                 HexScore[k] = "" + HexScore[k][1];
             }
-            string kupa = string.Join("", HexScore); 
+            string text = string.Join("", HexScore); 
             
-            return clearFront(kupa);
+            return ClearFront(text);
         }
-
-
-    
+        
         public string DecToOct()
         {
             int i = 0;
@@ -169,8 +166,7 @@ namespace NumSystemConverter
                 }
                 binVar /= 8;
                 i++;
-            }
-            int j = 1;
+            }            
 
             for (int k = 0; k < HexScore.Length / 2; k++)
             {
@@ -178,13 +174,11 @@ namespace NumSystemConverter
                 HexScore[HexScore.Length - 1 - k] = "" + HexScore[k][0];
                 HexScore[k] = "" + HexScore[k][1];
             }
-            string kupa = string.Join("", HexScore);
-
-
-            return clearFront(kupa);
+            string text = string.Join("", HexScore);
+            return ClearFront(text);
         }
 
-        string clearFront(string _text)
+        string ClearFront(string _text)
         {
             int index = 0;
             if (_text[0] == '0')
@@ -193,10 +187,8 @@ namespace NumSystemConverter
                 {
                     if (_text[o] != '0') { index = o; break; }
                 }
-
             }
             _text = _text.Remove(0, index);
-
             return _text;
         }
     }

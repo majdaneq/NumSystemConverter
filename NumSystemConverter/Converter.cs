@@ -16,13 +16,11 @@ namespace NumSystemConverter
     {
         public double numberToConvert;
         TextView txtBin, txtOct, txtDec, txtHex;
-        string number;
+        string number="";
         public bool done;
         
         public Converter()
-        {
-
-        }
+        {}
 
         ~Converter() { }
 
@@ -32,16 +30,15 @@ namespace NumSystemConverter
             txtOct = t2;
             txtDec = t3;
             txtHex = t4;
-                try
+           try
                 {
                     number = _number;                               
                     RadioCheck(b1,b2,b3,b4,t1,t2,t3,t4);
                 }
-                catch
+           catch
                 {
                 
-                }
-            
+                }           
         }
 
         public bool RadioCheck(RadioButton b1, RadioButton b2, RadioButton b3, RadioButton b4, TextView t1, TextView t2, TextView t3, TextView t4)
@@ -49,11 +46,9 @@ namespace NumSystemConverter
             if (b1.Checked==true)                                   //binary input
             {
                 numberToConvert = Convert.ToDouble(number);
-
                 string possibilities = "01";
                 done = checkInput(possibilities);
                 if (!done) return false;
-
                 BinConv binConv = new BinConv(t1,t2,t3,t4,number);
                 txtBin.Text = string.Format(number);
                 txtOct.Text = string.Format(binConv.BinToOct());
@@ -69,7 +64,6 @@ namespace NumSystemConverter
                 string possibilities = "01234567";
                 done = checkInput(possibilities);
                 if (!done) return false;
-
                 OctConv octConv = new OctConv(t1, t2, t3, t4, numberToConvert);
                 txtBin.Text = string.Format(octConv.OctToBin());
                 txtHex.Text = string.Format(octConv.OctToHex());
@@ -83,11 +77,8 @@ namespace NumSystemConverter
                 numberToConvert = Convert.ToDouble(number);
                 string possibilities = "0123456789";
                 done = checkInput(possibilities);
-                if (!done) return false;
-
-                
-                DecConv decConv = new DecConv(t1, t2, t3, t4, numberToConvert);
-                
+                if (!done) return false;                
+                DecConv decConv = new DecConv(t1, t2, t3, t4, numberToConvert);                
                 txtBin.Text=  string.Format(decConv.DecToBin());
                 txtDec.Text = string.Format(number);
                 txtHex.Text = string.Format(decConv.DecToHex());
@@ -104,7 +95,7 @@ namespace NumSystemConverter
                 txtHex.Text = string.Format(number);
                 txtDec.Text = string.Format(hexConv.HexToDec());
                 txtOct.Text = string.Format(hexConv.HexToOct());
-                 return true;
+                return true;
             }
 
             else return false;
