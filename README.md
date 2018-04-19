@@ -1,10 +1,20 @@
-# NumSystemConverter
-Numerical System Converter
+# Numerical System Converter
 
-Android App which converts the number given in binary, oct, dec, hex system to the others.
-lab 18.04.2018
+<center>Spis Treści: <br>
+1. Lista oznaczeń<br>
+2. Wstęp<br>
+3. Wymagania systemowe<br>
+4. Funkcjonalność<br>
+5. Analiza problemu<br>
+6. Projekt techniczny <br>
+7. Opis realizacji<br>
+8. Opis wykonanych testów<br>
+9. Podręcznik użytkownika<br>
+</center>
+<head>Android App which converts the number given in binary, oct, dec, hex system to the others.
+lab 18.04.2018</head>
 
-1. Lista oznacze?
+<b>1. Lista oznacze?</b>
 
 [tu dodajemy swoje oznaczenia użyte w tym dokumencie]
 
