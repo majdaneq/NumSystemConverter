@@ -4,11 +4,11 @@ Numerical System Converter
 Android App which converts the number given in binary, oct, dec, hex system to the others.
 lab 18.04.2018
 
-1. Lista oznaczeń
+1. Lista oznacze?
 
 [tu dodajemy swoje oznaczenia użyte w tym dokumencie]
 
-2. Wstęp
+2. Wst?p
 
 Dokument dotyczy opracowania wizyjnego systemu monitoringu stanu kierowcy. Celem tego systemu jest wykrycie oraz wszczęcie alarmu w przypadku wykrycia przyśnięcia lub braku należytej koncentracji kierującego pojazdem mechanicznym. 
 
