@@ -19,78 +19,34 @@ Spis Treści:<br>
 
 <b>1. Lista oznaczeń</b>
 
-[tu dodajemy swoje oznaczenia użyte w tym dokumencie]
+BIN - 
+OCT - 
+DEC - 
+HEX - 
 
 <b>2. Wstęp</b>
 
-Dokument dotyczy opracowania wizyjnego systemu monitoringu stanu kierowcy. Celem tego systemu jest wykrycie oraz wszczęcie alarmu w przypadku wykrycia przyśnięcia lub braku należytej koncentracji kierującego pojazdem mechanicznym. 
+Aplikacja moblina na systemy Android obliczająca wartość liczby z zadanego systemu liczbowego (BIN, OCT, DEC, HEX) na pozostałe systemy. Aplikacja jest zarówno polsko jak i angielskojęzyczna. 
 
 
-3.	Wymagania systemowe (requirements)
-
-
-Podstawowe założenia projektu:
-
-Przygotowanie syntetycznego opisu ….
-Opracowanie architektury systemu przetwarzania sygnałów cyfrowych oraz dalsze dookreślenie potrzeb i założeń takich jak m.in. interfejsy modułów …. 
-Opracowanie modułu … 
-
-
-
-4.Funkcjonalność (functionality)
-
-
-[punkty, tabelki, odpowiednie formatowanie tekstu, język, prostota wyrażania myśli]
-
-5.Analiza problemu (problem analysis)
-
-
-
-Sygnał s można zdefiniować jako pewną funkcję, która opisuje zależność wartościami wyjściowymi, takimi jak amplituda, a wejściowymi, takimi jak czas. W zależności od natury zjawiska użyta funkcja, np.
-,
-(1)
-może być jedno- lub wielo-wymiarowa, może być opisana wzorem analitycznym lub też podana w postaci tabeli, itd. Co więcej wartości x mogą być zarówno rzeczywiste, jak i zespolone.
-
-Tabela 31. Zależność między chwilami czasowymi ti oraz próbkami sygnału xi.
-
-…
-t0
-t1
-t2
-t3
-…
-…
-x0
-x1
-x2
-x3
-…
-
-
-
-Rysunek 31 przedstawia przykładowy ciągły sygnał s(t), którego próbki pobierane są co okres T. W ten sposób otrzymywany jest sygnał dyskretny s[n], gdzie n oznacza numer kolejnej próbki.
-
-
-Rysunek 31. Ciągły sygnał s(t) oraz ciąg próbek otrzymany z s(t) w stałych interwałach czasowych T.
+**3.	Wymagania systemowe** 
 
 
 
 
+**4.Funkcjonalność **
+
+- obliczanie liczby zadanej w określonym formacie na pozostałe systemy dostępne w ramach aplikacji
+- możliwość zmiany języku 
+
+
+**5.Analiza problemu** 
+
+Zamiana  systemów liczbowych: 
 
 
 
-
-
-[w czym rysować - np. Visio]
-
-
-
-
-Rysunek 32. Schemat cyfrowego systemu LTI o wejściu x[n], wyjściu y[n], zadanego skończonymi ciągami wartości {pk} oraz {dk}.
-
-
-
-6.Projekt techniczny (technical design)
+**6.Projekt techniczny **
 
 
 [diagramy UML]
@@ -176,7 +132,7 @@ The template class TVideoFor<> contains a vector of pointers to the frame images
 
 
 
-7.Opis realizacji (implementation report)
+**7.Opis realizacji**
 
 [dokładny opis platformy testowej - maszyna, narzędzia, kompilatory, system utrzymania źródeł, bcup, itd.]
 
@@ -187,9 +143,9 @@ Próba określenia funkcji ...
 Próba matematycznego zamodelowania funkcji ….
 Zbudowanie cyfrowego generatora funkcji ….
 
-8.Opis wykonanych testów (testing report) - lista buggów, uzupełnień, itd.
+**8.Opis wykonanych testów ** - lista buggów, uzupełnień, itd.
 
-9.Podręcznik użytkownika (user's manual)
+**9.Podręcznik użytkownika **
 
 
 Test Application for Windows
