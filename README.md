@@ -2,16 +2,16 @@
 
 <p align="center">
 <b>
-Spis Treści:
-1. Lista oznaczeń
-2. Wstęp
-3. Wymagania systemowe
-4. Funkcjonalność
-5. Analiza problemu
-6. Projekt techniczny 
-7. Opis realizacji
-8. Opis wykonanych testów
-9. Podręcznik użytkownika
+Spis Treści:<br>
+1. Lista oznaczeń<br>
+2. Wstęp<br>
+3. Wymagania systemowe<br>
+4. Funkcjonalność<br>
+5. Analiza problemu<br>
+6. Projekt techniczny <br>
+7. Opis realizacji<br>
+8. Opis wykonanych testów<br>
+9. Podręcznik użytkownika<br>
 </b></p>
 
 
