@@ -1,24 +1,26 @@
 # Numerical System Converter
 
-<center>Spis Treści: <br>
-1. Lista oznaczeń<br>
-2. Wstęp<br>
-3. Wymagania systemowe<br>
-4. Funkcjonalność<br>
-5. Analiza problemu<br>
-6. Projekt techniczny <br>
-7. Opis realizacji<br>
-8. Opis wykonanych testów<br>
-9. Podręcznik użytkownika<br>
-</center>
-<head>Android App which converts the number given in binary, oct, dec, hex system to the others.
-lab 18.04.2018</head>
+<p align="center">
+<b>
+Spis Treści:
+1. Lista oznaczeń
+2. Wstęp
+3. Wymagania systemowe
+4. Funkcjonalność
+5. Analiza problemu
+6. Projekt techniczny 
+7. Opis realizacji
+8. Opis wykonanych testów
+9. Podręcznik użytkownika
+</b></p>
 
-<b>1. Lista oznacze?</b>
+
+
+<b>1. Lista oznaczeń</b>
 
 [tu dodajemy swoje oznaczenia użyte w tym dokumencie]
 
-2. Wst?p
+<b>2. Wstęp</b>
 
 Dokument dotyczy opracowania wizyjnego systemu monitoringu stanu kierowcy. Celem tego systemu jest wykrycie oraz wszczęcie alarmu w przypadku wykrycia przyśnięcia lub braku należytej koncentracji kierującego pojazdem mechanicznym. 
 
