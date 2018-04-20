@@ -29,22 +29,38 @@ HEX -
 Aplikacja moblina na systemy Android obliczająca wartość liczby z zadanego systemu liczbowego (BIN, OCT, DEC, HEX) na pozostałe systemy. Aplikacja jest zarówno polsko jak i angielskojęzyczna. 
 
 
-**3.	Wymagania systemowe** 
+<b>3. Wymagania systemowe</b> 
+- smartfon z systemem Android w wersji 4.4 lub wyższej
+- 10 MB wolnego miejsca w pamięci wewnętrznej/zewnętrznej telefonu
 
-
-
-
-**4.Funkcjonalność **
+<b> 4.Funkcjonalność</b>
 
 - obliczanie liczby zadanej w określonym formacie na pozostałe systemy dostępne w ramach aplikacji
-- możliwość zmiany języku 
+- możliwość zmiany języku PL/EN
 
+<b> 5.Analiza problemu </b>
 
-**5.Analiza problemu** 
+W systemach liczbowych znaczenie ma wartość cyfry oraz jej indeks w liczbie.
 
-Zamiana  systemów liczbowych: 
+Dla systemu dwójkowego mamy do dyspozycji 2 cyfry {0,1}. Każda następna cyfra (licząc od końca) w liczbie jest 2 razy większa od cyfry rzędu poprzedniego. 
 
+W ten sposób możemy stworzyć uogulniony schemat opisu systemu N.
 
+Dla systemu N mamy do dyspozycji N cyfr z przedziału <0,N-1>. Każda następna cyfra (licząc od końca) w liczbie jest N razy większa od cyfry poprzedniego rzędu.
+
+Zamiana systemów:
+a)bin->oct
+b)bin->dec
+c)bin->hex
+d)oct->bin
+e)oct->dec
+f)oct->hex
+g)dec->bin
+h)dec->oct
+i)dec->hex
+j)hex->bin
+k)hex->oct
+j)hex->dec
 
 **6.Projekt techniczny **
 
@@ -132,29 +148,34 @@ The template class TVideoFor<> contains a vector of pointers to the frame images
 
 
 
-**7.Opis realizacji**
+<b>7.Opis realizacji</b>
 
-[dokładny opis platformy testowej - maszyna, narzędzia, kompilatory, system utrzymania źródeł, bcup, itd.]
+Projekt był tworzony w środowisku Visual Studio 2017 Enterprise.
 
-
-
-Podsumowując, zaobserwowane problemy do rozwiązania to:
-Próba określenia funkcji ...
-Próba matematycznego zamodelowania funkcji ….
-Zbudowanie cyfrowego generatora funkcji ….
-
-**8.Opis wykonanych testów ** - lista buggów, uzupełnień, itd.
-
-**9.Podręcznik użytkownika **
+Aplikacja testowana była na smartfonach:
+- Sony Xperia XZ Premium (Android 8.0)
+- Sony Xperia Z3 Compact (Android 4.4.4)
+- Samsung Galaxy S6 (Android 5.0)
 
 
-Test Application for Windows
+<b>8.Opis wykonanych testów </b> 
+Testy były wykonywane wraz z kolejnymi funckjonalnościami. Sprawdzana była poprawność obliczeń oraz zakres, dla którego konwersja przebiegała poprawnie.
 
-With the help of the HIL a simple Win32 application was created. This is a standard multi document-view architecture of the MFC platform, depicted in Rysunek 71. Visible are the original image of a road scene with its affinely warped version (behind) and below the 5x5 median filtered (below).
+Ogarniczenia liczbowe dla systemów:
+binarny:
+ósemkowy:
+dziesiętny:
+szesnastkowy:
 
-10.Metodologia rozwoju i utrzymania systemu (system maintenance and deployment)
 
-Bibliografia
+<b>9.Podręcznik użytkownika </b>
 
-[Stroustrup, Sommervile, McConnel, Hunt & Thomas]
+- instalacja aplikacji
+- uruchomienie aplikacji
+- wybranie języka oraz systemu, w którym chce się wpisać liczbę
+- wpisanie liczby w wskazane miejsce
+- potwierdzenie przyciskiem "Oblicz/Count"
+
+W razie problemów z instalacją/funkcjonalnością aplikacji prosżę o kontakt mailowy: szymonbortel8@gmail.com. W temacie maila proszę zawrzeć "GIT_NSC". 
+
 
