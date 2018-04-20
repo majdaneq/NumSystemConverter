@@ -67,6 +67,7 @@
     <Compile Include="DecConv.cs" />
     <Compile Include="HexConv.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Observer.cs" />
     <Compile Include="OctConv.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

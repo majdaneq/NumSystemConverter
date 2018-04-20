@@ -146,4 +146,12 @@
             android:id="@+id/InradioButton4"
             android:layout_marginLeft="150.0dp" />
     </RadioGroup>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number"
+        android:id="@+id/switch1" 
+        android:textOn="EN"
+        android:textOff="PL"        
+        />
 </RelativeLayout>

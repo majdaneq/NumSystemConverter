@@ -87,6 +87,9 @@ namespace NumSystemConverter
 			// aapt resource value: 0x7f050003
 			public const int scorebutton = 2131034115;
 			
+			// aapt resource value: 0x7f050011
+			public const int switch1 = 2131034129;
+			
 			// aapt resource value: 0x7f050005
 			public const int textBin = 2131034117;
 			

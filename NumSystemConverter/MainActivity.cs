@@ -5,7 +5,7 @@ using Android.OS;
 namespace NumSystemConverter
 {
     [Activity(Label = "NumSystemConverter", MainLauncher = true)]
-    public class MainActivity : Activity
+    public class MainActivity : Activity, Observer
     {
         #region declarations
         
@@ -24,7 +24,7 @@ namespace NumSystemConverter
         public static RadioButton InDec;
         public RadioButton InHex;
         public RadioButton InOct;
-
+        Switch language;
         #endregion
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -34,6 +34,7 @@ namespace NumSystemConverter
             SetContentView(Resource.Layout.Main);
 
             #region attribution
+            language = FindViewById<Switch>(Resource.Id.switch1);
             buttonCount = FindViewById<Button>(Resource.Id.scorebutton);
             number = FindViewById<EditText>(Resource.Id.number);
             init = FindViewById<TextView>(Resource.Id.init);
@@ -51,6 +52,16 @@ namespace NumSystemConverter
             InHex = FindViewById<RadioButton>(Resource.Id.InradioButton4);
             #endregion
 
+            
+            language.TextOff = "PL";
+            language.TextOn = "EN";
+
+            language.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs e)
+                  {
+                      if (e.IsChecked)
+                          Update(language.TextOn);
+                      else Update(language.TextOff);                   
+                  };
             buttonCount.Click +=
                delegate
                {
@@ -58,6 +69,26 @@ namespace NumSystemConverter
                    if (!convert.done) Toast.MakeText(this, "Wprowadź poprawną liczbę", ToastLength.Long).Show();                   
                };
         }
+
+        public void Update(string language)
+        {   switch (language)
+            {
+                case "PL":
+                    textBin.Text = "Binarnie :";
+                    textDec.Text = "Dziesiętnie:";
+                    textOct.Text = "Oktagonalnie";
+                    textHex.Text = "Heksadecymalnie";
+                    break;
+                case "EN":
+                    textBin.Text = "Binary :";
+                    textDec.Text = "Decimal :";
+                    textOct.Text = "Octagonal :";
+                    textHex.Text = "Hexagonal : ";
+                    break;
+            }
+        }
+
+        
     }
 }
 
