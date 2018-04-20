@@ -62,8 +62,10 @@ j)hex->bin
 k)hex->oct
 j)hex->dec
 
-**6.Projekt techniczny **
+<b>6.Projekt techniczny</b>
+6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton
 
+[![https://imgur.com/a/wo3WHjs](https://imgur.com/a/wo3WHjs "https://imgur.com/a/wo3WHjs")](https://imgur.com/a/wo3WHjs "https://imgur.com/a/wo3WHjs")
 
 [diagramy UML]
 
