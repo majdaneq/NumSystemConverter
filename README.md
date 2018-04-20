@@ -76,6 +76,10 @@ Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który impleme
 
 ![](screenshots/MainActObs.JPG)
 
+6.3 Converter
+
+
+6.4 Bin Conv
 
 [diagramy UML]
 
