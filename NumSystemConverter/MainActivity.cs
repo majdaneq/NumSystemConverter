@@ -1,12 +1,14 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using System;
 
 namespace NumSystemConverter
 {
 
     
     [Activity(Label = "NumSystemConverter", MainLauncher = true)]
+
     public class MainActivity : Activity, Observer
     {    
         string ErrorText = "Wprowadź poprawną liczbę";
@@ -14,8 +16,7 @@ namespace NumSystemConverter
         {
             base.OnCreate(savedInstanceState);           
             SetContentView(Resource.Layout.Main);
-
-            LayoutSingleton o1 = LayoutSingleton.utworzObiekt();
+            LayoutSingleton o1 = LayoutSingleton.CreateObject();
 
             #region attribution
             o1.language = FindViewById<Switch>(Resource.Id.switch1);
@@ -34,11 +35,9 @@ namespace NumSystemConverter
             o1.InOct = FindViewById<RadioButton>(Resource.Id.InradioButton2);
             o1.InDec = FindViewById<RadioButton>(Resource.Id.InradioButton3);
             o1.InHex = FindViewById<RadioButton>(Resource.Id.InradioButton4);
-            #endregion}
-
-
             o1.language.TextOff = "PL";
             o1.language.TextOn = "EN";
+            #endregion}
 
             o1.language.CheckedChange += delegate (object sender, CompoundButton.CheckedChangeEventArgs e)
                   {
@@ -48,9 +47,14 @@ namespace NumSystemConverter
                   };
             o1.buttonCount.Click += delegate
                {
-                   Converter convert = new Converter(o1.number.Text, o1.InBin, o1.InOct, o1.InDec, o1.InHex, o1.textBinScore, o1.textOctScore, o1.textDecScore, o1.textHexScore);     
-                   if (!convert.done) Toast.MakeText(this, ErrorText, ToastLength.Long).Show();                   
+                   if (!convertNumber(o1)) Toast.MakeText(this, ErrorText, ToastLength.Long).Show();                   
                };
+        }
+        private bool convertNumber(LayoutSingleton o1)
+        {
+            Converter convert = new Converter(o1.number.Text, o1.InBin, o1.InOct, o1.InDec, o1.InHex, o1.textBinScore, o1.textOctScore, o1.textDecScore, o1.textHexScore);
+            if (convert.done == true) return true;
+            else return false;           
         }
 
         public void UpdateLanguage(string language, LayoutSingleton o1)
