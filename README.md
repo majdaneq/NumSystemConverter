@@ -63,9 +63,19 @@ k)hex->oct
 j)hex->dec
 
 <b>6.Projekt techniczny</b>
-6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton
+6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton<br>
 
-[![https://imgur.com/a/wo3WHjs](https://imgur.com/a/wo3WHjs "https://imgur.com/a/wo3WHjs")](https://imgur.com/a/wo3WHjs "https://imgur.com/a/wo3WHjs")
+![](screenshots/LayoutSingleton.JPG)
+
+6.2 Main Activity - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.
+Metody:
+convertNumber: IN: przekazuje pola ulegające zmianie w GUI oraz wpisaną przez użytkownika liczbę. 
+OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
+
+Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który implementuje metodę UpdateLanguage wywoływaną wraz ze zmianą switcha. Jest to przykładowy sposób użycia wzorca projektowego Observer.
+
+![](screenshots/MainActObs.JPG)
+
 
 [diagramy UML]
 
