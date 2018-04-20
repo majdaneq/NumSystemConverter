@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace NumSystemConverter
 {
-    class OctConv : Converter
+    class OctConv : Converter,setAdapt
     {
         TextView txtDec, txtBin, txtHex;
         double convert;
@@ -438,7 +438,7 @@ namespace NumSystemConverter
             return finalresult;
         }
 
-        string setTab(string varResult)
+        public string setTab(string varResult)
         {
             switch (varResult)
             {
@@ -461,6 +461,11 @@ namespace NumSystemConverter
                 default: return "ERROR";
 
             }
+        }
+
+        public string SetTab(string varResult)
+        {
+            throw new NotImplementedException();
         }
     }
 }

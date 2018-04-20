@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace NumSystemConverter
 {
-    class HexConv : Converter
+    class HexConv : Converter, setAdapt
     {
         TextView txtDec, txtBin, txtOct;
         string varResult;
@@ -521,6 +521,11 @@ namespace NumSystemConverter
                 var += setTabOct(varRes[l]);
             }
             return var;
+        }
+
+        public string SetTab(string varResult)
+        {
+            throw new NotImplementedException();
         }
 
         string setTabOct(string varResult)

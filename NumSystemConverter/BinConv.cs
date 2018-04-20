@@ -12,12 +12,11 @@ using Android.Widget;
 
 namespace NumSystemConverter
 {
-    class BinConv : Converter
-    {
-        TextView txtDec, txtHex, txtOct;
+    class BinConv : Converter,setAdapt
+    {      
         double convert;
-        double result = 0;
-        string finalresult;
+        double result = 0;        
+        StringBuilder converted = new StringBuilder();
         double varRes = 0;
         string varResult;
         string res;
@@ -26,83 +25,78 @@ namespace NumSystemConverter
         public BinConv(LayoutSingleton _layoutSingleton)
         {
             layoutSingleton = _layoutSingleton;
-        }
+            varResult = layoutSingleton.number.Text;           
+        }       
 
-        public BinConv(TextView t1, TextView t2, TextView t3, TextView t4, string numberToConvert)
-        {                     
-            varResult = numberToConvert; 
-        }
-
-        public string BinToDec(double _convert)                                        //10 bit res
+        public string BinToDec()                                                        //10 bit res
         {
-            var digits = new List<char>();                               //conversion to int array           
+            var digits = new List<char>();                                              //conversion to int array           
             for (int n = varResult.Length - 1; n >= 0; n--)
-                digits.Add(varResult[n]);
+                digits.Add(varResult[n]);                                                  
             var arr = digits.ToArray();
-            Array.Reverse(arr);
+            Array.Reverse(arr);                                                         //binary input eg 10(10) -> 1010(2)
             int m = 0;
-
             for (int i = varResult.Length - 1; i >= 0; i--)
             {
                 varRes = Convert.ToInt32(new string(arr[i], 1)) * Convert.ToInt32(Math.Pow(2, m));
                 convert = convert % 10;
                 m++;
                 result += varRes;
-            }
-
-            finalresult = Convert.ToString(result);
-
-            return finalresult;
+            }  
+            return Convert.ToString(result);
         }
 
         public string BinToOct()
         {
-            string varResultOct = varResult;
-            switch (varResult.Length % 3)                                       //making a 4*digit 
+            string converted = varResult;           
+            switch (converted.Length % 3)                                                  
             {
                 case 1:
-                    varResultOct = varResultOct.Insert(0, "00"); break;
+                    converted = converted.Insert(0, "00"); break;
                 case 2:
-                    varResultOct = varResultOct.Insert(0, "0"); break;                
+                    converted = converted.Insert(0, "0"); break;                         //if 0 is missing add it           
             }
 
             //check how long is the binary number
 
-            int divider = varResultOct.Length / 3;           
+            int divider = converted.Length / 3;
+            StringBuilder sex = new StringBuilder();
             string varResult1 = "";
+            for (int j = 0; j <converted.Length-1; j++) varResult1 =varResult1.Insert(j," ");
+            
             string varResult2 = "";
             string varResult3 = "";
             string varResult4 = "";
             string varResult5 = "";
             string varResult6 = "";
+
             // dividing string into 4 elements arrays 
             int i = 0;
             string var;
-
             switch (divider)
             {
                 case 0: return "ERROR";
 
-                case 1: return setTabOct(varResultOct);
+                case 1: return setTabOct(converted);
                 case 2:
-                    while (i < 3)
+                    for(i=0;i<3;i++)
                     {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        
-                        i++;
-                    }
-                        res = setTabOct(varResult1);
-                        var = res;
-                        res = setTabOct(varResult2);
-                        var += res;
+                        varResult1= varResult1.Insert(i,converted[i].ToString());
+                        varResult1=varResult1.Insert(i+2, converted[i+3].ToString());
+                      //  sex.Insert(i,(converted[i]));         //front
+                       // sex.Insert(i+3,converted[i + 3]);     //back
+                       
+                    }               
+                    
+                        var = setTabOct(sex.ToString().Substring(0, 3));                    
+                        var += setTabOct(sex.ToString().Substring(3, 3));
                     return var;
                 case 3:
                     while (i < 3)
                     {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
+                        varResult1 += converted[i];         //front
+                        varResult2 += converted[i + 3];     //back
+                        varResult3 += converted[i + 6];     //backback
                         
                         i++;
                     }
@@ -116,10 +110,10 @@ namespace NumSystemConverter
                 case 4:
                     while (i < 3)
                     {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
-                        varResult4 += varResultOct[i + 9];    //backbackback
+                        varResult1 += converted[i];         //front
+                        varResult2 += converted[i + 3];     //back
+                        varResult3 += converted[i + 6];     //backback
+                        varResult4 += converted[i + 9];    //backbackback
                         
                         i++;
                     }
@@ -135,11 +129,11 @@ namespace NumSystemConverter
                 case 5:
                     while (i < 3)
                     {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
-                        varResult4 += varResultOct[i + 9];    //backbackback
-                        varResult5 += varResultOct[i + 12];    //backbackback
+                        varResult1 += converted[i];         //front
+                        varResult2 += converted[i + 3];     //back
+                        varResult3 += converted[i + 6];     //backback
+                        varResult4 += converted[i + 9];    //backbackback
+                        varResult5 += converted[i + 12];    //backbackback
                         
                         i++;
                     }
@@ -157,12 +151,12 @@ namespace NumSystemConverter
                 case 6:
                     while (i < 3)
                     {
-                        varResult1 += varResultOct[i];         //front
-                        varResult2 += varResultOct[i + 3];     //back
-                        varResult3 += varResultOct[i + 6];     //backback
-                        varResult4 += varResultOct[i + 9];    //backbackback
-                        varResult5 += varResultOct[i + 12];    //backbackback
-                        varResult6 += varResultOct[i + 15];
+                        varResult1 += converted[i];         //front
+                        varResult2 += converted[i + 3];     //back
+                        varResult3 += converted[i + 6];     //backback
+                        varResult4 += converted[i + 9];    //backbackback
+                        varResult5 += converted[i + 12];    //backbackback
+                        varResult6 += converted[i + 15];
                         
                         i++;
                     }
@@ -373,6 +367,11 @@ namespace NumSystemConverter
             Array.Reverse(arr);
 
             return arr;
+        }
+
+        public string SetTab(string varResult)
+        {
+            throw new NotImplementedException();
         }
     }
 }

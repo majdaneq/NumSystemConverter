@@ -54,7 +54,7 @@ namespace NumSystemConverter
         }
 
         private bool convertNumber(LayoutSingleton o1)
-        {   Converter convert = new Converter(o1);                      
+        {   Converter convert = new Converter(o1);            
             if (convert.done == true) return true;
             else return false;           
         }

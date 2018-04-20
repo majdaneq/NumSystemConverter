@@ -1,60 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="NumSystemConverter.BinConv" Collapsed="true">
+  <Class Name="NumSystemConverter.BinConv">
     <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgggAAiAAABAIAAAAAGCQAAAACAAAEAAAAQCA=</HashCode>
+      <HashCode>AAAAAAAgggAAiAAABAIAAAAAGCYAAAACAAAEAAAAQCA=</HashCode>
       <FileName>BinConv.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="NumSystemConverter.DecConv" Collapsed="true">
+  <Class Name="NumSystemConverter.DecConv">
     <Position X="2" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAABAAAAAAAACgAIAIAAAAhAAAQAAAAAIAAAAAA=</HashCode>
       <FileName>DecConv.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NumSystemConverter.HexConv" Collapsed="true">
+  <Class Name="NumSystemConverter.HexConv">
     <Position X="3.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAggAAACCCAABIAAAAAEAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAggAAACCCAABIAAAAAEAIAAAABAAAAAAAAAAA=</HashCode>
       <FileName>HexConv.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="NumSystemConverter.OctConv" Collapsed="true">
+  <Class Name="NumSystemConverter.OctConv">
     <Position X="5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAgAgAAiAAABBIAAAAAAAQAAAACAAAMAAAAAQA=</HashCode>
+      <HashCode>QAAAAAAgAgAAiAAABBIAAAAAAAYAAAACAAAMAAAAAQA=</HashCode>
       <FileName>OctConv.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="NumSystemConverter.LayoutSingleton" Collapsed="true">
-    <Position X="9.5" Y="1.5" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAEAAYAjEAAgCAAAEABAAAgIQAEEAAAAAAAg=</HashCode>
       <FileName>LayoutSingleton.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NumSystemConverter.Converter" Collapsed="true">
-    <Position X="1.75" Y="2.5" Width="1.5" />
+    <Position X="2.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAAAAgQgAAQCAgAAIAAAAAEAAAAAAAAAAACAAAAAA=</HashCode>
+      <HashCode>ACAAAAAAAAAAQCAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Converter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NumSystemConverter.MainActivity" Collapsed="true">
-    <Position X="5.75" Y="2.5" Width="1.5" />
+    <Position X="2.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAACAAQCAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainActivity.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="NumSystemConverter.Observer">
-    <Position X="4.25" Y="0.75" Width="1.5" />
+  <Interface Name="NumSystemConverter.Observer" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Observer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NumSystemConverter.setAdapt" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>setAdapt.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
