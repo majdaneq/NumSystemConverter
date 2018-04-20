@@ -18,12 +18,18 @@ namespace NumSystemConverter
         TextView txtBin, txtOct, txtDec, txtHex;
         string number="";
         public bool done;
+        LayoutSingleton layout;
         
         public Converter()
         {}
 
         ~Converter() { }
 
+        public Converter(LayoutSingleton laySing)
+        {
+            number = laySing.number.Text;
+           // RadioCheck(laySing.InBin, b2, b3, b4, t1, t2, t3, t4);
+        }
         public Converter(string _number,RadioButton b1,RadioButton b2,RadioButton b3,RadioButton b4,TextView t1, TextView t2, TextView t3, TextView t4)                                 
         {                 
             txtBin = t1;
@@ -50,10 +56,10 @@ namespace NumSystemConverter
                 done = checkInput(possibilities);
                 if (!done) return false;
                 BinConv binConv = new BinConv(t1,t2,t3,t4,number);
-                txtBin.Text = string.Format(number);
-                txtOct.Text = string.Format(binConv.BinToOct());
-                txtHex.Text = string.Format(binConv.BinToHex(numberToConvert));
-                txtDec.Text = string.Format(binConv.BinToDec(numberToConvert));
+                layout.textBin.Text = string.Format(number);
+                layout.textOct.Text = string.Format(binConv.BinToOct());
+                layout.textHex.Text = string.Format(binConv.BinToHex(numberToConvert));
+                layout.textDec.Text = string.Format(binConv.BinToDec(numberToConvert));
                 done = true;
                 return done;
             }
@@ -79,10 +85,10 @@ namespace NumSystemConverter
                 done = checkInput(possibilities);
                 if (!done) return false;                
                 DecConv decConv = new DecConv(t1, t2, t3, t4, numberToConvert);                
-                txtBin.Text=  string.Format(decConv.DecToBin());
-                txtDec.Text = string.Format(number);
-                txtHex.Text = string.Format(decConv.DecToHex());
-                txtOct.Text = string.Format(decConv.DecToOct());
+                layout.textBin.Text =  string.Format(decConv.DecToBin());
+                layout.textDec.Text = string.Format(number);
+                layout.textHex.Text = string.Format(decConv.DecToHex());
+                layout.textOct.Text = string.Format(decConv.DecToOct());
                 return true;
             }
             if (b4.Checked == true)                                 //hex input

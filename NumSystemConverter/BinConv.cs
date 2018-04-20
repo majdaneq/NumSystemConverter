@@ -13,10 +13,7 @@ using Android.Widget;
 namespace NumSystemConverter
 {
     class BinConv : Converter
-    {   public BinConv()
-        {
-
-        }
+    {
         TextView txtDec, txtHex, txtOct;
         double convert;
         double result = 0;
@@ -24,12 +21,15 @@ namespace NumSystemConverter
         double varRes = 0;
         string varResult;
         string res;
+        LayoutSingleton layoutSingleton;
+        
+        public BinConv(LayoutSingleton _layoutSingleton)
+        {
+            layoutSingleton = _layoutSingleton;
+        }
 
         public BinConv(TextView t1, TextView t2, TextView t3, TextView t4, string numberToConvert)
-        {
-            txtDec = t3;
-            txtHex = t4;
-            txtOct = t2;            
+        {                     
             varResult = numberToConvert; 
         }
 

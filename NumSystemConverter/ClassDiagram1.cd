@@ -28,23 +28,30 @@
       <FileName>OctConv.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NumSystemConverter.MainActivity">
-    <Position X="6.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAAAAAACAAQCAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MainActivity.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="NumSystemConverter.LayoutSingleton">
+  <Class Name="NumSystemConverter.LayoutSingleton" Collapsed="true">
     <Position X="9.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAEAAYAjEAAgCAAAEABAAAgIQAEEAAAAAAAg=</HashCode>
       <FileName>LayoutSingleton.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="NumSystemConverter.Converter" Collapsed="true">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAgQgAAQCAgAAIAAAAAEAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Converter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NumSystemConverter.MainActivity" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAACAAQCAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainActivity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="NumSystemConverter.Observer">
-    <Position X="4.5" Y="1.75" Width="1.5" />
+    <Position X="4.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Observer.cs</FileName>
