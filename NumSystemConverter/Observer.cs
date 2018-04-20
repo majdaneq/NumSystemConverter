@@ -14,7 +14,7 @@ namespace NumSystemConverter
 {
     interface Observer
     {
-        void UpdateLanguage(string language);
+        void UpdateLanguage(string language,LayoutSingleton o1);
         //void UpdateGUI();
     }
 }

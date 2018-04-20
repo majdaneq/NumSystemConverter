@@ -66,6 +66,7 @@
     <Compile Include="Converter.cs" />
     <Compile Include="DecConv.cs" />
     <Compile Include="HexConv.cs" />
+    <Compile Include="LayoutSingleton.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="OctConv.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />

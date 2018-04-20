@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/init"
-        android:hint="Number"
         android:padding="16dp"
         android:inputType="none" />
     <Button
@@ -25,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="count"
+        android:text="Oblicz"
         android:padding="16dp"
         android:layout_below="@+id/radioGroup1" />
     <TextView
@@ -43,7 +42,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="WynikBin"
+        
         android:padding="16dp"
         android:layout_below="@+id/scorebutton"
         android:layout_toRightOf="@+id/textBin"
@@ -67,7 +66,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10.0dp"
-        android:text="WynikDzies"
+        
         android:padding="16dp"
         android:layout_below="@+id/textBin"
         android:layout_toRightOf="@+id/textDec" />
@@ -88,7 +87,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10.0dp"
-        android:text="WynikHex"
+       
         android:padding="16dp"
         android:layout_below="@+id/textDec"
         android:layout_toRightOf="@+id/textHex" />
@@ -109,7 +108,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10.0dp"
-        android:text="WynikOct"
+       
         android:padding="16dp"
         android:layout_below="@+id/textHex"
         android:layout_toRightOf="@+id/textOct" />
@@ -150,8 +149,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/number"
-        android:id="@+id/switch1" 
+        android:id="@+id/switch1"
         android:textOn="EN"
-        android:textOff="PL"        
-        />
+        android:textOff="PL" />
 </RelativeLayout>
