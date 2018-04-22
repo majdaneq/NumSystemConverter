@@ -14,7 +14,7 @@ namespace NumSystemConverter
 {   
     class Converter:MainActivity
     {
-        public double numberToConvert;       
+        //public double numberToConvert;       
         string number="";
         public bool done;
         
@@ -25,12 +25,13 @@ namespace NumSystemConverter
 
         public Converter(LayoutSingleton laySing)
         {
-           done=RadioCheck(laySing);
+            number = laySing.number.Text;
+           done =RadioCheck(laySing);
         }       
 
         public bool RadioCheck(LayoutSingleton layout)
         {
-            numberToConvert = Convert.ToDouble(layout.number.Text);
+            //numberToConvert = Convert.ToDouble(layout.number.Text);
 
             if (layout.InBin.Checked==true)                                   //binary input
             {                
@@ -38,23 +39,21 @@ namespace NumSystemConverter
                 if (!checkInput(possibilities)) return false;
                 BinConv binConv = new BinConv(layout);
                 layout.textBinScore.Text = string.Format(layout.number.Text);
-                layout.textOctScore.Text = string.Format(binConv.BinToOct());
-                layout.textHexScore.Text = string.Format(binConv.BinToHex(numberToConvert));
-                layout.textDecScore.Text = string.Format(binConv.BinToDec());               
+                layout.textOctScore.Text = string.Format(binConv.BinToOct(layout.number.Text));
+                layout.textHexScore.Text = string.Format(binConv.BinToHex(layout.number.Text));
+                layout.textDecScore.Text = string.Format(binConv.BinToDec(layout.number.Text));               
                 return true;
             }
 
             if (layout.InOct.Checked==true)                                   //oct input
-            {               
-
+            { 
                 string possibilities = "01234567";
                 if (!checkInput(possibilities)) return false;
-                // OctConv octConv = new OctConv(t1, t2, t3, t4, numberToConvert);
-                //txtBin.Text = string.Format(octConv.OctToBin());
-                //txtHex.Text = string.Format(octConv.OctToHex());
-                //txtOct.Text = string.Format(number);
-                //txtDec.Text = string.Format(octConv.OctToDec());                
-                               
+                OctConv octConv = new OctConv(layout);
+                layout.textBinScore.Text = string.Format(octConv.OctToBin());
+                layout.textHexScore.Text = string.Format(octConv.OctToHex());
+                layout.textOctScore.Text = string.Format(layout.number.Text);
+                layout.textDecScore.Text = string.Format(octConv.OctToDec());  
                 return true;
             }
 
@@ -62,11 +61,11 @@ namespace NumSystemConverter
             {               
                 string possibilities = "0123456789";
                 if (!checkInput(possibilities)) return false;
-               // DecConv decConv = new DecConv(t1, t2, t3, t4, numberToConvert);                
-                //layout.textBin.Text =  string.Format(decConv.DecToBin());
-                //layout.textDec.Text = string.Format(number);
-                //layout.textHex.Text = string.Format(decConv.DecToHex());
-                //layout.textOct.Text = string.Format(decConv.DecToOct());
+                DecConv decConv = new DecConv(layout);                
+                layout.textBinScore.Text = string.Format(decConv.DecToBin());
+                layout.textDecScore.Text = string.Format(layout.number.Text);
+                layout.textHexScore.Text = string.Format(decConv.DecToHex());
+                layout.textOctScore.Text = string.Format(decConv.DecToOct());
                 return true;
             }
 
@@ -74,11 +73,11 @@ namespace NumSystemConverter
             {
                 string possibilities = "0123456789abcdefABCDEF";
                 if (!checkInput(possibilities)) return false;
-                //HexConv hexConv = new HexConv(t1, t2, t3, t4, number);
-                //txtBin.Text = string.Format(hexConv.HexToBin());
-                //txtHex.Text = string.Format(number);
-                //txtDec.Text = string.Format(hexConv.HexToDec());
-                //txtOct.Text = string.Format(hexConv.HexToOct());
+                HexConv hexConv = new HexConv(layout);
+                layout.textBinScore.Text = string.Format(hexConv.HexToBin());
+                layout.textDecScore.Text = string.Format(hexConv.HexToDec());
+                layout.textHexScore.Text = string.Format(layout.number.Text);
+                layout.textOctScore.Text = string.Format(hexConv.HexToOct());
                 return true;
             }
 

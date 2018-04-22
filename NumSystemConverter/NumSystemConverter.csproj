@@ -66,6 +66,7 @@
     <Compile Include="Converter.cs" />
     <Compile Include="DecConv.cs" />
     <Compile Include="HexConv.cs" />
+    <Compile Include="TabToConvert.cs" />
     <Compile Include="LayoutSingleton.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Observer.cs" />
