@@ -1,4 +1,4 @@
-## Numerical System Converter
+﻿## Numerical System Converter
 # Dokumtacja
 
 <p align="center">
@@ -19,10 +19,10 @@ Spis Treści:<br>
 
 <b>1. Lista oznaczeń</b>
 
-BIN - 
-OCT - 
-DEC - 
-HEX - 
+BIN - system binarny(2)
+OCT - system ósemkowy(8)
+DEC - system dziesiętny(10)
+HEX - system szesnastkowy(16)
 
 <b>2. Wstęp</b>
 
@@ -48,29 +48,43 @@ W ten sposób możemy stworzyć uogulniony schemat opisu systemu N.
 
 Dla systemu N mamy do dyspozycji N cyfr z przedziału <0,N-1>. Każda następna cyfra (licząc od końca) w liczbie jest N razy większa od cyfry poprzedniego rzędu.
 
-Zamiana systemów - schematy zastosowane w aplikacji
-a)bin->oct
+Zamiana systemów - schematy zastosowane w aplikacji<br>
+a)bin->oct 
+<br>
 b)bin->dec
  Otrzymaną liczbę w typie double zamieniamy na tablicę charów. Następnie obracamy tablicę i od końca tablicy zaczynamy mnożyć cyfry z systemu binarnego razy kolejne potęgi liczby 2 jednocześnie dzieląc modulo naszą pierwotną liczbę.
+<br>
 c)bin->hex
+
 d)oct->bin
+
 e)oct->dec
+
 f)oct->hex
+
 g)dec->bin
+
 h)dec->oct
+
 i)dec->hex
+
 j)hex->bin
+
 k)hex->oct
+
 j)hex->dec
 
-<b>6.Projekt techniczny</b>
+<b>6.Projekt techniczny</b><br>
 6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton<br>
 
 ![](screenshots/LayoutSingleton.JPG)
 
 6.2 Main Activity - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.<br>
+
 Metody:
--convertNumber: IN: przekazuje pola ulegające zmianie w GUI oraz wpisaną przez użytkownika liczbę. 
+
+-convertNumber: 
+IN: przekazuje pola ulegające zmianie w GUI oraz wpisaną przez użytkownika liczbę. 
                OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
 
 Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który implementuje metodę UpdateLanguage wywoływaną wraz ze zmianą switcha. Jest to przykładowy sposób użycia wzorca projektowego Observer.<br>
@@ -78,7 +92,9 @@ Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który impleme
 ![](screenshots/MainActObs.JPG)
 
 6.3 Converter <br>
+
 Metody : 
+
 -RadioCheck: tworzy obiekty klas odpowiedzialnych za konwersję w zależoności od zaznaczonego RadioButton
 	IN: LayoutSingleton
 	OUT: bool - true gdy konwersja przebiegła pomyślnie
@@ -89,7 +105,9 @@ Metody :
 ![](screenshots/Converter.JPG)
 
 6.4 TabToConvert<br>
-metody :
+
+Metody :
+
 -setTabHex - dla 4 cyfr binarnych ustawia odpowiednik w HEX
 -setTabOct - dla 3 cyfr binarnych ustawia odpowiednik w OCT
 -DecHexTab -
@@ -101,6 +119,7 @@ metody :
 ![](screenshots/TabToConvert.JPG)<br>
 
 6.4 Bin Conv - każda z metod przyjmuje liczbę wpisaną przez użytkownika oraz zwraca przekonwertowaną<br>
+
 Metody:
 - BinToDec - konwersja Bin->Dec
 - BinToOct - konwersja Bin->Oct, wykorzystuje metodę setTabOct
