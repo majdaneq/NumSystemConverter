@@ -48,9 +48,10 @@ W ten sposób możemy stworzyć uogulniony schemat opisu systemu N.
 
 Dla systemu N mamy do dyspozycji N cyfr z przedziału <0,N-1>. Każda następna cyfra (licząc od końca) w liczbie jest N razy większa od cyfry poprzedniego rzędu.
 
-Zamiana systemów:
+Zamiana systemów - schematy zastosowane w aplikacji
 a)bin->oct
 b)bin->dec
+ Otrzymaną liczbę w typie double zamieniamy na tablicę charów. Następnie obracamy tablicę i od końca tablicy zaczynamy mnożyć cyfry z systemu binarnego razy kolejne potęgi liczby 2 jednocześnie dzieląc modulo naszą pierwotną liczbę.
 c)bin->hex
 d)oct->bin
 e)oct->dec
@@ -69,100 +70,51 @@ j)hex->dec
 
 6.2 Main Activity - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.
 Metody:
-convertNumber: IN: przekazuje pola ulegające zmianie w GUI oraz wpisaną przez użytkownika liczbę. 
-OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
+-convertNumber: IN: przekazuje pola ulegające zmianie w GUI oraz wpisaną przez użytkownika liczbę. 
+               OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
 
 Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który implementuje metodę UpdateLanguage wywoływaną wraz ze zmianą switcha. Jest to przykładowy sposób użycia wzorca projektowego Observer.
 
 ![](screenshots/MainActObs.JPG)
 
-6.3 Converter
+6.3 Converter - 
+Metody : 
+-RadioCheck: tworzy obiekty klas odpowiedzialnych za konwersję w zależoności od zaznaczonego RadioButton
+	IN: LayoutSingleton
+	OUT: bool - true gdy konwersja przebiegła pomyślnie
+-checkInput: sprawdza, czy numer został wprowadzony poprawnie
+	IN: możliwości wyboru w zależności od systemu
+	OUT: bool - true gdy numer wpisany poprawnie.
+	
+![](screenshots/Converter.JPG)
 
+6.4 TabToConvert
+metody :
+-setTabHex - dla 4 cyfr binarnych ustawia odpowiednik w HEX
+-setTabOct - dla 3 cyfr binarnych ustawia odpowiednik w OCT
+-DecHexTab -
+-DecOctTab -
+-ClearFront - usuwa '0' z przodu, metoda kosmetyczna
+	IN: tekst, który ma zostać edytowany
+	OUT: zedytowany tekst.
+	
+![](screenshots/TabToConvert.JPG)
 
 6.4 Bin Conv
+![](screenshots/BinConv.JPG)
 
-[diagramy UML]
+6.5 HexConv
 
-[diagram klas]
+![](screenshots/HexConv.JPG)
+6.6 OctConv
 
-
-Parę Uwag Wstępnych
-
-Równie istotna jest strona edycyjna utworzonego dokumentu (data utworzenia i kolejnych modyfikacji, nazwisko osoby oraz e-mail kontaktowy, copyrights, nazwa projektu, itd.)
-
-W przypadku dużych projektów, każdy z wyżej wymienionych rozdziałów może być realizowany w postaci oddzielnego dokumentu.
-
-Kod źródłowy rzadko umieszcza się w dokumentacji gdyż ulega on częstym zmianom. Nie oznacza to jednak, że kod źródłowy jest zupełnie nieopisany. Wręcz przeciwnie - kod źródłowy powinien dokumentować się sam, tzn. odpowiednie jego fragmenty powinny być uzupełnione treściwym, ale zwięzłym, komentarzem. W zależności od fragmentu kodu przypisany mu komentarz powinien przede wszystkim opisywać główną ideę, cel lub też specyfikę tego fragmentu kodu. W razie konieczności można automatycznie wygenerować dokumentację z opisem fragmentów kodu na podstawie jego struktury oraz zawartych tam komentarzy. Istnieje kilka narzędzi do tego celu, np. Doxygen […]. 
-
-Poniżej przedstawiany przykładowe fragmenty funkcji wraz z przyjętym w naszych projektach formatem ich komentowania.
+![](screenshots/OctConv.JPG)
+6.7 DecConv
+![](screenshots/DecConv.JPG)
 
 
- 
-///////////////////////////////////////////////////////////
-// This function does k-means on the input image.
-///////////////////////////////////////////////////////////
-//		
-// INPUT:
-//		tu opisujemy argumenty funkcji, ich typ i role
-//		
-// OUTPUT:
-//		tu opisujemy co zwraca dana funkcja
-//		
-// REMARKS:
-//		tutaj zapisujemy dodatkowe uwagi, np. dodatkowe
-//		opcje wywołań, specjalny format argumentów, itd.
-//		
-
-Powyższy opis użyty w pewny fragmencie rzeczywistego projektu
-
- 
-///////////////////////////////////////////////////////////
-// This function does k-means on the input image.
-///////////////////////////////////////////////////////////
-//		
-// INPUT:
-//		inImage - a color image
-//		initialMeans - external table of the initial means
-//		outMeanCenters - optional repository for output of final
-//			k means
-//		maxAllowableIteration - a fuse for max number of iterations
-//		madeIterations - optional parameter for actual number
-//			of iterations
-//		
-// OUTPUT:
-//		status of the operation (see k_Means_Message)
-//		
-// REMARKS:
-//		
-//		
-k_Means_Message k_MeansForImage::operator () ( 	const ColorImage & inImage, 
-								const DataRepository & initialMeans, 
-								ColorImage * & outImage, 
-								int maxAllowableIteration /*= 1000*/ );
- 
-
-
-Podobnie dla klas, dla przykładu
-
- 
-///////////////////////////////////////////////////////////
-// This class implements my vision of eye recognition.
-///////////////////////////////////////////////////////////
-class TEyeRecognition
- 
- 
- 6.1
- Przykład - Main Class Hierarchy
-
-Video streams are composed of strictly timed image frames. Rysunek 41 depicts class hierarchy for this video data structure. Data organization of a video object is presented in …. 
-
-Rysunek 41. TVideoFor<> class hierarchy
-
-The template class TVideoFor<> contains a vector of pointers to the frame images. Each frame is an object of the TImageFor<> class. 
-
-
-
-
+UML całości: 
+![](screenshots/UML.JPG)
 
 <b>7.Opis realizacji</b>
 
