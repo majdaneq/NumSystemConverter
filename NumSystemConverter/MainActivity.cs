@@ -38,6 +38,10 @@ namespace NumSystemConverter
             o1.InHex = FindViewById<RadioButton>(Resource.Id.InradioButton4);
             o1.language.TextOff = "PL";
             o1.language.TextOn = "EN";
+            o1.InBin.Text = "Binarnie";
+            o1.InDec.Text = "Dziesiętnie";
+            o1.InHex.Text = "Szesnastkowo";
+            o1.InOct.Text = "Osemkowo";
             #endregion}
 
             o1.language.CheckedChange += delegate (object sender, CompoundButton.CheckedChangeEventArgs e)
