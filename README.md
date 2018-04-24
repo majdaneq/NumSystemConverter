@@ -48,25 +48,34 @@ W ten sposób możemy stworzyć uogulniony schemat opisu systemu N.
 
 Dla systemu N mamy do dyspozycji N cyfr z przedziału <0,N-1>. Każda następna cyfra (licząc od końca) w liczbie jest N razy większa od cyfry poprzedniego rzędu.
 
-Zamiana systemów - schematy zastosowane w aplikacji<br>
-a)bin->oct 
+Zamiana systemów - schematy zastosowane w aplikacji
+<br>
+a)bin->oct: dla wprowadzonej liczby sprawdzamy czy jest ona dokładnie podzielna przez 3, jeżeli nie dokładamy do niej odpowiednią ilość zer. Następnie dla każdej "trojki" w liczbie przypisujemy jej odpowienik w systemie binarnym, np. 010(2) -> 2(8).
+
 <br>
 b)bin->dec
  Otrzymaną liczbę w typie double zamieniamy na tablicę charów. Następnie obracamy tablicę i od końca tablicy zaczynamy mnożyć cyfry z systemu binarnego razy kolejne potęgi liczby 2 jednocześnie dzieląc modulo naszą pierwotną liczbę.
+ 
 <br>
-c)bin->hex
+c)bin->hex :  dla wprowadzonej liczby sprawdzamy czy jest ona dokładnie podzielna przez 4, jeżeli nie dokładamy do niej odpowiednią ilość zer. Następnie dla każdej "czwórki" w liczbie przypisujemy jej odpowienik w systemie binarnym, np. 0010(2) -> 2(16).
 
-d)oct->bin
+<br>
+d)oct->bin: konwersja działa w odwrotny sposób niż opisana w podpunkcie a). Dla kolejnych cyfr w liczbie w systemie OCT przypisujemy jej binarny odpowiednik.
 
-g)dec->bin
+<br>
+g)dec->bin: liczba do konwersji jest dzielona przez 2, zapisywana w tablicy. Następnie każdy z jej elementów jest dzielony przez kolejne potęgi liczby 10 aby uzyskać liczbę binarną.
 
-h)dec->oct
+<br>
+h)dec->oct: liczba dziesiętna jest dzielona modulo 8, jej wynik zapisywany jest w tablicy. Później tablica zostaje odwrócona i wynik zostaje wypisany w poprawnej kolejności.
 
-i)dec->hex
+<br>
+i)dec->hex: liczba dziesiętna jest dzielona modulo 16, jej wynik zapisywany jest w tablicy. Później tablica zostaje odwrócona i wynik zostaje wypisany w poprawnej kolejności.
 
-j)hex->bin
+<br>
+j)hex->bin: każda cyfra zamieniana jest na 4-cyfrową liczbę binarną. np. f(16)->1111(2)
 
-j)hex->dec
+<br>
+j)hex->dec: każda cyfra liczby jest mnożona przez odpowienią potęgę liczby 16 w zależności od pozycji cyfry w liczbie. Wynik dziesiętny jest sumą wymnożonych liczb.
 
 <b>6.Projekt techniczny</b><br>
 6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton<br>
@@ -107,7 +116,7 @@ Metody:
 	
 ![](screenshots/Converter.JPG)
 
-6.4 TabToConvert<br>
+6.4 TabToConvert - zawiera metody rozszerzające inne klasy. Pełni rolę dekoratora.<br>
 
 Metody :
 
