@@ -66,12 +66,14 @@
     <Compile Include="Converter.cs" />
     <Compile Include="DecConv.cs" />
     <Compile Include="HexConv.cs" />
+    <Compile Include="TabToConvert.cs" />
     <Compile Include="LayoutSingleton.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="OctConv.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="setAdapt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

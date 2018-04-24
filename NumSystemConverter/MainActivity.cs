@@ -12,6 +12,7 @@ namespace NumSystemConverter
     public class MainActivity : Activity, Observer
     {    
         string ErrorText = "Wprowadź poprawną liczbę";
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);           
@@ -45,14 +46,15 @@ namespace NumSystemConverter
                           UpdateLanguage(o1.language.TextOn,o1);
                       else UpdateLanguage(o1.language.TextOff,o1);
                   };
+
             o1.buttonCount.Click += delegate
                {
                    if (!convertNumber(o1)) Toast.MakeText(this, ErrorText, ToastLength.Long).Show();                   
                };
         }
+
         private bool convertNumber(LayoutSingleton o1)
-        {
-            Converter convert = new Converter(o1.number.Text, o1.InBin, o1.InOct, o1.InDec, o1.InHex, o1.textBinScore, o1.textOctScore, o1.textDecScore, o1.textHexScore);
+        {   Converter convert = new Converter(o1);            
             if (convert.done == true) return true;
             else return false;           
         }
