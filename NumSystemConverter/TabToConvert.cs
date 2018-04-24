@@ -161,6 +161,7 @@ namespace NumSystemConverter
             }
             return OctScore;
         }
+
         public string ClearFront(string _text)
         {
             int index = 0;

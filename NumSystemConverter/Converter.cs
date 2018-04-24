@@ -13,26 +13,22 @@ using Android.Widget;
 namespace NumSystemConverter
 {   
     class Converter:MainActivity
-    {
-        //public double numberToConvert;       
+    {           
         string number="";
         public bool done;
         
-        public Converter()
-        {}
+        public Converter() {}
 
         ~Converter() { }
 
         public Converter(LayoutSingleton laySing)
         {
-            number = laySing.number.Text;
+           number = laySing.number.Text;
            done =RadioCheck(laySing);
         }       
 
         public bool RadioCheck(LayoutSingleton layout)
         {
-            //numberToConvert = Convert.ToDouble(layout.number.Text);
-
             if (layout.InBin.Checked==true)                                   //binary input
             {                
                 string possibilities = "01";                
