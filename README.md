@@ -1,4 +1,4 @@
-﻿## Numerical System Converter
+## Numerical System Converter
 # Dokumtacja
 
 <p align="center">
@@ -71,7 +71,7 @@ j)hex->dec
 <b>6.Projekt techniczny</b><br>
 6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton<br>
 
-![](screenshots/LayoutSingleton.JPG)
+<p align="center"> ![](screenshots/LayoutSingleton.JPG) </p>
 
 6.2 Main Activity - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.<br>
 
@@ -85,7 +85,7 @@ OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
 
 Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który implementuje metodę UpdateLanguage wywoływaną wraz ze zmianą switcha. Jest to przykładowy sposób użycia wzorca projektowego Observer.<br>
 
-![](screenshots/MainActObs.JPG)
+<p align="center">![](screenshots/MainActObs.JPG)</p>
 
 6.3 Converter <br>
 
@@ -103,7 +103,7 @@ Metody :
 
 	OUT: bool - true gdy numer wpisany poprawnie.<br>
 	
-![](screenshots/Converter.JPG)
+<p align="center">![](screenshots/Converter.JPG)</p>
 
 6.4 TabToConvert<br>
 
@@ -123,7 +123,7 @@ Metody :
 
 	OUT: zedytowany tekst.<br>
 	
-![](screenshots/TabToConvert.JPG)<br>
+<p align="center">![](screenshots/TabToConvert.JPG)<br></p>
 
 6.4 Bin Conv - każda z metod przyjmuje liczbę wpisaną przez użytkownika oraz zwraca przekonwertowaną<br>
 
@@ -131,10 +131,11 @@ Metody:
 - BinToDec - konwersja Bin->Dec
 - BinToOct - konwersja Bin->Oct, wykorzystuje metodę setTabOct
 - BinToHex - konwersja Bin->Hex, wykorzystuje metodę setTabHex<br>
-![](screenshots/BinConv.JPG)<br>
+<p align="center">![](screenshots/BinConv.JPG)<br></p>
 
 
 6.5 HexConv<br>
+
 Metody:
 - HexToBin
 - HexToDec
@@ -145,24 +146,23 @@ Metody:
 
 6.6 OctConv<br>
 Metody:
--OctToBin
--OctToDec - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
--OctToHex - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
+- OctToBin
+- OctToDec - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
+- OctToHex - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
 
-![](screenshots/OctConv.JPG)<br>
+<p align="center">![](screenshots/OctConv.JPG)<br></p>
 
 6.7 DecConv<br>
-
 Metody:
--DecToBin
--DecToOct
--DecToHex
+- DecToBin
+- DecToOct
+- DecToHex
 
-![](screenshots/DecConv.JPG)<br>
+<p align="center">![](screenshots/DecConv.JPG)<br></p>
 
 
 UML całości: <br>
-![](screenshots/UML.JPG)<br>
+<p align="center">![](screenshots/UML.JPG)<br></p>
 
 <b>7.Opis realizacji</b>
 
