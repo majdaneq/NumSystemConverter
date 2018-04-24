@@ -81,13 +81,16 @@ liczba do konwersji jest dzielona przez 2, zapisywana w tablicy. Następnie każ
 <br>
 <b>j)hex->dec:</b><br> każda cyfra liczby jest mnożona przez odpowienią potęgę liczby 16 w zależności od pozycji cyfry w liczbie. Wynik dziesiętny jest sumą wymnożonych liczb.
 
+
+
+<br>
 #<b>6.Projekt techniczny</b><br>
-6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton<br>
+<b>6.1 LayoutSingleton</b> - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton<br>
 
 ![](screenshots/LayoutSingleton.JPG) 
 
 
-6.2 Main Activity - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.<br>
+<b>6.2 Main Activity</b> - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.<br>
 
 Metody:
 
@@ -102,7 +105,7 @@ Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który impleme
 ![](screenshots/MainActObs.JPG)
 
 
-6.3 Converter <br>
+<b>6.3 Converter </b><br>
 
 Metody: 
 
@@ -120,7 +123,7 @@ Metody:
 	
 ![](screenshots/Converter.JPG)
 
-6.4 TabToConvert - zawiera metody rozszerzające inne klasy. Pełni rolę dekoratora.<br>
+<b>6.4</b> TabToConvert - zawiera metody rozszerzające inne klasy. Pełni rolę dekoratora.<br>
 
 Metody :
 
@@ -146,7 +149,7 @@ Metody :
 	
 ![](screenshots/TabToConvert.JPG)<br>
 
-6.4 Bin Conv - każda z metod przyjmuje liczbę wpisaną przez użytkownika(string) oraz zwraca przekonwertowaną(string<br>
+<b>6.5 Bin Conv</b> - każda z metod przyjmuje liczbę wpisaną przez użytkownika(string) oraz zwraca przekonwertowaną(string<br>
 
 Metody:
 - BinToDec - konwersja Bin->Dec
@@ -155,7 +158,7 @@ Metody:
 <p align="center">![](screenshots/BinConv.JPG)<br></p>
 
 
-6.5 HexConv<br>
+<b>6.6 HexConv</b><br>
 
 Metody:
 - HexToBin - dla każdej cyfry w liczbie HEX przypisuje kolejno jej odpowienik 4-cyfrowej liczby binarnie.
@@ -171,7 +174,7 @@ Metody:
 ![](screenshots/HexConv.JPG)<br>
 
 
-6.6 OctConv<br>
+<b>6.7 OctConv</b><br>
 Metody:
 - OctToBin - dla każdej cyfry w liczbie wprowadzonej przez użytkownika tworzy jej 3 cyfrowy binarny odpowiednik
 
@@ -185,7 +188,7 @@ Metody:
 
 ![](screenshots/OctConv.JPG)<br>
 
-6.7 DecConv<br>
+<b>6.8 DecConv</b><br>
 Metody:
 - DecToBin - metoda realizuje funkcję opisaną w punkcie 5-tym dla tej konwersji.
 OUT: liczba BIN(string)
