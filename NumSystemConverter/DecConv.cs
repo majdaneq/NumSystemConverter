@@ -13,7 +13,7 @@ namespace NumSystemConverter
 {
     class DecConv :TabToConvert
     {   private long[] binScore=new long[20];
-        private long binVar;
+        private long varResultInt;
         
         public string Message="";
         double scorevar;
@@ -26,7 +26,7 @@ namespace NumSystemConverter
         {
             layoutSingleton = _slayoutSingleton;
             varResult = layoutSingleton.number.Text;
-            binVar = Convert.ToInt64(varResult);
+            varResultInt = Convert.ToInt64(varResult);
         }   
 
         public string DecToBin()
@@ -51,35 +51,34 @@ namespace NumSystemConverter
 
         public string DecToHex()
         {            
-            binVar = Convert.ToInt64(varResult);            
+            varResultInt = Convert.ToInt64(varResult);            
             string[] HexScore = new string[varResult.Length];
-            HexScore = DecHexTab(binScore,varResult,binVar);            
-
-            for (int k = 0; k < HexScore.Length / 2; k++)
+            HexScore = DecHexTab(binScore,varResult,varResultInt);
+            Array a = HexScore.ToArray();
+            Array.Reverse(a);
+            string score = "";
+            foreach (string element in a)
             {
-                HexScore[k] += HexScore[HexScore.Length - 1 - k];
-                HexScore[HexScore.Length - 1 - k] = "" + HexScore[k][0];
-                HexScore[k] = "" + HexScore[k][1];
+                score += element;
             }
-            string text = string.Join("", HexScore);
-            return ClearFront(text);            
+
+            return ClearFront(score);            
         }
 
         public string DecToOct()
         {           
-            binVar = Convert.ToInt64(varResult);           
-            string[] HexScore = new string[varResult.Length];
-
-            HexScore = DecOctTab(binScore, varResult, binVar);
-                ;
-            for (int k = 0; k < HexScore.Length / 2; k++)
+            varResultInt = Convert.ToInt64(varResult);           
+            string[] OctScore = new string[varResult.Length];
+            OctScore = DecOctTab(binScore, varResult, varResultInt);
+            Array a = OctScore.ToArray();
+            Array.Reverse(a);
+            string score="";
+            foreach(string element in a)
             {
-                HexScore[k] += HexScore[HexScore.Length - 1 - k];
-                HexScore[HexScore.Length - 1 - k] = "" + HexScore[k][0];
-                HexScore[k] = "" + HexScore[k][1];
-            }
-            string text = string.Join("", HexScore);
-            return ClearFront(text);            
+                score += element;
+            }                  
+            
+            return ClearFront(score);            
         }      
     }
 }

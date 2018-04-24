@@ -53,7 +53,8 @@ namespace NumSystemConverter
 
             o1.buttonCount.Click += delegate
                {
-                   if (!convertNumber(o1)) Toast.MakeText(this, ErrorText, ToastLength.Long).Show();                   
+                   if (!convertNumber(o1)) Toast.MakeText(this, ErrorText, ToastLength.Long).Show();     
+                   
                };
         }
 
