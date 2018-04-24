@@ -144,6 +144,7 @@ Metody:
 
 
 6.6 OctConv<br>
+Metody:
 -OctToBin
 -OctToDec - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
 -OctToHex - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
@@ -153,14 +154,10 @@ Metody:
 6.7 DecConv<br>
 
 Metody:
-
 -DecToBin
-
 -DecToOct
-
 -DecToHex
 
-<br>
 ![](screenshots/DecConv.JPG)<br>
 
 
