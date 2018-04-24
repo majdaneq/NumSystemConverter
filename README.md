@@ -19,10 +19,10 @@ Spis Treści:<br>
 
 <b>1. Lista oznaczeń</b>
 
-BIN - system binarny(2)
-OCT - system ósemkowy(8)
-DEC - system dziesiętny(10)
-HEX - system szesnastkowy(16)
+BIN - system binarny(2)<br>
+OCT - system ósemkowy(8)<br>
+DEC - system dziesiętny(10)<br>
+HEX - system szesnastkowy(16)<br>
 
 <b>2. Wstęp</b>
 
@@ -58,10 +58,6 @@ c)bin->hex
 
 d)oct->bin
 
-e)oct->dec
-
-f)oct->hex
-
 g)dec->bin
 
 h)dec->oct
@@ -69,8 +65,6 @@ h)dec->oct
 i)dec->hex
 
 j)hex->bin
-
-k)hex->oct
 
 j)hex->dec
 
@@ -84,8 +78,10 @@ j)hex->dec
 Metody:
 
 -convertNumber: 
+
 IN: przekazuje pola ulegające zmianie w GUI oraz wpisaną przez użytkownika liczbę. 
-               OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
+
+OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
 
 Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który implementuje metodę UpdateLanguage wywoływaną wraz ze zmianą switcha. Jest to przykładowy sposób użycia wzorca projektowego Observer.<br>
 
@@ -96,10 +92,15 @@ Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który impleme
 Metody : 
 
 -RadioCheck: tworzy obiekty klas odpowiedzialnych za konwersję w zależoności od zaznaczonego RadioButton
+
 	IN: LayoutSingleton
+
 	OUT: bool - true gdy konwersja przebiegła pomyślnie
+
 -checkInput: sprawdza, czy numer został wprowadzony poprawnie
+
 	IN: możliwości wyboru w zależności od systemu
+
 	OUT: bool - true gdy numer wpisany poprawnie.<br>
 	
 ![](screenshots/Converter.JPG)
@@ -109,11 +110,17 @@ Metody :
 Metody :
 
 -setTabHex - dla 4 cyfr binarnych ustawia odpowiednik w HEX
+
 -setTabOct - dla 3 cyfr binarnych ustawia odpowiednik w OCT
+
 -DecHexTab -
+
 -DecOctTab -
+
 -ClearFront - usuwa '0' z przodu, metoda kosmetyczna
+
 	IN: tekst, który ma zostać edytowany
+
 	OUT: zedytowany tekst.<br>
 	
 ![](screenshots/TabToConvert.JPG)<br>
@@ -123,8 +130,9 @@ Metody :
 Metody:
 - BinToDec - konwersja Bin->Dec
 - BinToOct - konwersja Bin->Oct, wykorzystuje metodę setTabOct
-- BinToHex - konwersja Bin->Hex, wykorzystuje metodę setTabHex
+- BinToHex - konwersja Bin->Hex, wykorzystuje metodę setTabHex<br>
 ![](screenshots/BinConv.JPG)<br>
+
 
 6.5 HexConv<br>
 Metody:
@@ -133,17 +141,26 @@ Metody:
 - HexToOct - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
 
 ![](screenshots/HexConv.JPG)<br>
+
+
 6.6 OctConv<br>
 -OctToBin
 -OctToDec - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
 -OctToHex - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
 
 ![](screenshots/OctConv.JPG)<br>
+
 6.7 DecConv<br>
+
 Metody:
+
 -DecToBin
+
 -DecToOct
+
 -DecToHex
+
+<br>
 ![](screenshots/DecConv.JPG)<br>
 
 
@@ -162,12 +179,6 @@ Aplikacja testowana była na smartfonach:
 
 <b>8.Opis wykonanych testów </b> 
 Testy były wykonywane wraz z kolejnymi funckjonalnościami. Sprawdzana była poprawność obliczeń oraz zakres, dla którego konwersja przebiegała poprawnie.
-
-Ogarniczenia liczbowe dla systemów:
-binarny:
-ósemkowy:
-dziesiętny:
-szesnastkowy:
 
 
 <b>9.Podręcznik użytkownika </b>
