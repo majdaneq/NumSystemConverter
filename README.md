@@ -68,27 +68,27 @@ j)hex->dec
 
 ![](screenshots/LayoutSingleton.JPG)
 
-6.2 Main Activity - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.
+6.2 Main Activity - tworzy obiekt klasy LayoutSingleton, przypisuje mu istniejące w GUI elementy. Dodatkowo zajmuje się obsługą Eventów buttona oraz switcha. Pole ErrorText przechowuje tekst, który jest wyświetlany w przypadku błędnej konwersji.<br>
 Metody:
 -convertNumber: IN: przekazuje pola ulegające zmianie w GUI oraz wpisaną przez użytkownika liczbę. 
                OUT: w przypadku poprawnej konwersji zwraca true, w przeciwnym razie false.
 
-Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który implementuje metodę UpdateLanguage wywoływaną wraz ze zmianą switcha. Jest to przykładowy sposób użycia wzorca projektowego Observer.
+Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który implementuje metodę UpdateLanguage wywoływaną wraz ze zmianą switcha. Jest to przykładowy sposób użycia wzorca projektowego Observer.<br>
 
 ![](screenshots/MainActObs.JPG)
 
-6.3 Converter - 
+6.3 Converter <br>
 Metody : 
 -RadioCheck: tworzy obiekty klas odpowiedzialnych za konwersję w zależoności od zaznaczonego RadioButton
 	IN: LayoutSingleton
 	OUT: bool - true gdy konwersja przebiegła pomyślnie
 -checkInput: sprawdza, czy numer został wprowadzony poprawnie
 	IN: możliwości wyboru w zależności od systemu
-	OUT: bool - true gdy numer wpisany poprawnie.
+	OUT: bool - true gdy numer wpisany poprawnie.<br>
 	
 ![](screenshots/Converter.JPG)
 
-6.4 TabToConvert
+6.4 TabToConvert<br>
 metody :
 -setTabHex - dla 4 cyfr binarnych ustawia odpowiednik w HEX
 -setTabOct - dla 3 cyfr binarnych ustawia odpowiednik w OCT
@@ -96,25 +96,40 @@ metody :
 -DecOctTab -
 -ClearFront - usuwa '0' z przodu, metoda kosmetyczna
 	IN: tekst, który ma zostać edytowany
-	OUT: zedytowany tekst.
+	OUT: zedytowany tekst.<br>
 	
-![](screenshots/TabToConvert.JPG)
+![](screenshots/TabToConvert.JPG)<br>
 
-6.4 Bin Conv
-![](screenshots/BinConv.JPG)
+6.4 Bin Conv - każda z metod przyjmuje liczbę wpisaną przez użytkownika oraz zwraca przekonwertowaną<br>
+Metody:
+- BinToDec - konwersja Bin->Dec
+- BinToOct - konwersja Bin->Oct, wykorzystuje metodę setTabOct
+- BinToHex - konwersja Bin->Hex, wykorzystuje metodę setTabHex
+![](screenshots/BinConv.JPG)<br>
 
-6.5 HexConv
+6.5 HexConv<br>
+Metody:
+- HexToBin
+- HexToDec
+- HexToOct - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
 
-![](screenshots/HexConv.JPG)
-6.6 OctConv
+![](screenshots/HexConv.JPG)<br>
+6.6 OctConv<br>
+-OctToBin
+-OctToDec - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
+-OctToHex - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
 
-![](screenshots/OctConv.JPG)
-6.7 DecConv
-![](screenshots/DecConv.JPG)
+![](screenshots/OctConv.JPG)<br>
+6.7 DecConv<br>
+Metody:
+-DecToBin
+-DecToOct
+-DecToHex
+![](screenshots/DecConv.JPG)<br>
 
 
-UML całości: 
-![](screenshots/UML.JPG)
+UML całości: <br>
+![](screenshots/UML.JPG)<br>
 
 <b>7.Opis realizacji</b>
 
