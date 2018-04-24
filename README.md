@@ -1,5 +1,5 @@
 ### Numerical System Converter
-## Dokumtacja
+## Dokumentacja
 
 <p align="center">
 <b>
