@@ -1,5 +1,5 @@
-## Numerical System Converter
-# Dokumtacja
+### Numerical System Converter
+## Dokumtacja
 
 <p align="center">
 <b>
@@ -17,28 +17,28 @@ Spis Treści:<br>
 
 
 
-<b>1. Lista oznaczeń</b>
+#<b>1. Lista oznaczeń</b>
 
 BIN - system binarny(2)<br>
 OCT - system ósemkowy(8)<br>
 DEC - system dziesiętny(10)<br>
 HEX - system szesnastkowy(16)<br>
 
-<b>2. Wstęp</b>
+#<b>2. Wstęp</b>
 
 Aplikacja moblina na systemy Android obliczająca wartość liczby z zadanego systemu liczbowego (BIN, OCT, DEC, HEX) na pozostałe systemy. Aplikacja jest zarówno polsko jak i angielskojęzyczna. 
 
 
-<b>3. Wymagania systemowe</b> 
+#<b>3. Wymagania systemowe</b> 
 - smartfon z systemem Android w wersji 4.4 lub wyższej
 - 10 MB wolnego miejsca w pamięci wewnętrznej/zewnętrznej telefonu
 
-<b> 4.Funkcjonalność</b>
+#<b> 4.Funkcjonalność</b>
 
 - obliczanie liczby zadanej w określonym formacie na pozostałe systemy dostępne w ramach aplikacji
 - możliwość zmiany języku PL/EN
 
-<b> 5.Analiza problemu </b>
+#<b> 5.Analiza problemu </b>
 
 W systemach liczbowych znaczenie ma wartość cyfry oraz jej indeks w liczbie.
 
@@ -50,34 +50,38 @@ Dla systemu N mamy do dyspozycji N cyfr z przedziału <0,N-1>. Każda następna 
 
 Zamiana systemów - schematy zastosowane w aplikacji
 <br>
-a)bin->oct: dla wprowadzonej liczby sprawdzamy czy jest ona dokładnie podzielna przez 3, jeżeli nie dokładamy do niej odpowiednią ilość zer. Następnie dla każdej "trojki" w liczbie przypisujemy jej odpowienik w systemie binarnym, np. 010(2) -> 2(8).
+<b>a)bin->oct: </b><br>
+dla wprowadzonej liczby sprawdzamy czy jest ona dokładnie podzielna przez 3, jeżeli nie dokładamy do niej odpowiednią ilość zer. Następnie dla każdej "trojki" w liczbie przypisujemy jej odpowienik w systemie binarnym, np. 010(2) -> 2(8).
 
 <br>
-b)bin->dec
+<b>b)bin->dec: </b><br>
  Otrzymaną liczbę w typie double zamieniamy na tablicę charów. Następnie obracamy tablicę i od końca tablicy zaczynamy mnożyć cyfry z systemu binarnego razy kolejne potęgi liczby 2 jednocześnie dzieląc modulo naszą pierwotną liczbę.
  
 <br>
-c)bin->hex :  dla wprowadzonej liczby sprawdzamy czy jest ona dokładnie podzielna przez 4, jeżeli nie dokładamy do niej odpowiednią ilość zer. Następnie dla każdej "czwórki" w liczbie przypisujemy jej odpowienik w systemie binarnym, np. 0010(2) -> 2(16).
+<b>c)bin->hex : </b><br>
+dla wprowadzonej liczby sprawdzamy czy jest ona dokładnie podzielna przez 4, jeżeli nie dokładamy do niej odpowiednią ilość zer. Następnie dla każdej "czwórki" w liczbie przypisujemy jej odpowienik w systemie binarnym, np. 0010(2) -> 2(16).
 
 <br>
-d)oct->bin: konwersja działa w odwrotny sposób niż opisana w podpunkcie a). Dla kolejnych cyfr w liczbie w systemie OCT przypisujemy jej binarny odpowiednik.
+<b>d)oct->bin:</b> <br>
+konwersja działa w odwrotny sposób niż opisana w podpunkcie a). Dla kolejnych cyfr w liczbie w systemie OCT przypisujemy jej binarny odpowiednik.
 
 <br>
-g)dec->bin: liczba do konwersji jest dzielona przez 2, zapisywana w tablicy. Następnie każdy z jej elementów jest dzielony przez kolejne potęgi liczby 10 aby uzyskać liczbę binarną.
+<b>g)dec->bin: </b><br>
+liczba do konwersji jest dzielona przez 2, zapisywana w tablicy. Następnie każdy z jej elementów jest dzielony przez kolejne potęgi liczby 10 aby uzyskać liczbę binarną.
 
 <br>
-h)dec->oct: liczba dziesiętna jest dzielona modulo 8, jej wynik zapisywany jest w tablicy. Później tablica zostaje odwrócona i wynik zostaje wypisany w poprawnej kolejności.
+<b>h)dec->oct: </b><br>liczba dziesiętna jest dzielona modulo 8, jej wynik zapisywany jest w tablicy. Później tablica zostaje odwrócona i wynik zostaje wypisany w poprawnej kolejności.
 
 <br>
-i)dec->hex: liczba dziesiętna jest dzielona modulo 16, jej wynik zapisywany jest w tablicy. Później tablica zostaje odwrócona i wynik zostaje wypisany w poprawnej kolejności.
+<b>i)dec->hex: </b><br>liczba dziesiętna jest dzielona modulo 16, jej wynik zapisywany jest w tablicy. Później tablica zostaje odwrócona i wynik zostaje wypisany w poprawnej kolejności.
 
 <br>
-j)hex->bin: każda cyfra zamieniana jest na 4-cyfrową liczbę binarną. np. f(16)->1111(2)
+<b>j)hex->bin:</b><br> każda cyfra zamieniana jest na 4-cyfrową liczbę binarną. np. f(16)->1111(2)
 
 <br>
-j)hex->dec: każda cyfra liczby jest mnożona przez odpowienią potęgę liczby 16 w zależności od pozycji cyfry w liczbie. Wynik dziesiętny jest sumą wymnożonych liczb.
+<b>j)hex->dec:</b><br> każda cyfra liczby jest mnożona przez odpowienią potęgę liczby 16 w zależności od pozycji cyfry w liczbie. Wynik dziesiętny jest sumą wymnożonych liczb.
 
-<b>6.Projekt techniczny</b><br>
+#<b>6.Projekt techniczny</b><br>
 6.1 LayoutSingleton - tworzy pola użyte w pliku layoutowym XAML, które będą istnieć przez cały czas życia aplikacji. Wykorzystano do tego design pattern - Singleton<br>
 
 ![](screenshots/LayoutSingleton.JPG) 
@@ -196,7 +200,7 @@ OUT: liczba HEX(string)
 UML całości: <br>
 ![](screenshots/UML.JPG)<br>
 
-<b>7.Opis realizacji</b>
+#<b>7.Opis realizacji</b>
 
 Projekt był tworzony w środowisku Visual Studio 2017 Enterprise.
 
@@ -206,11 +210,11 @@ Aplikacja testowana była na smartfonach:
 - Samsung Galaxy S6 (Android 5.0)
 
 
-<b>8.Opis wykonanych testów </b> 
+#<b>8.Opis wykonanych testów </b> 
 Testy były wykonywane wraz z kolejnymi funckjonalnościami. Sprawdzana była poprawność obliczeń oraz zakres, dla którego konwersja przebiegała poprawnie.
 
 
-<b>9.Podręcznik użytkownika </b>
+#<b>9.Podręcznik użytkownika </b>
 
 - instalacja aplikacji
 - uruchomienie aplikacji
