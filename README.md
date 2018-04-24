@@ -91,7 +91,7 @@ Dodatkowo klasa Main Activity dziedziczy po interfejsie Observer, który impleme
 
 6.3 Converter <br>
 
-Metody : 
+Metody: 
 
 -RadioCheck: tworzy obiekty klas odpowiedzialnych za konwersję w zależoności od zaznaczonego RadioButton
 
@@ -113,21 +113,27 @@ Metody :
 
 -setTabHex - dla 4 cyfr binarnych ustawia odpowiednik w HEX
 
+	IN: liczba binarna(string)
+	OUT: wynik w HEX(string)<br>
+
 -setTabOct - dla 3 cyfr binarnych ustawia odpowiednik w OCT
 
--DecHexTab -
+	IN: liczba binarna(string)
+	OUT: wynik w OCT(string)<br>
+-DecHexTab - na podstawie liczby dziesiętnej otrzymujemy wynik w HEX
 
--DecOctTab -
+-DecOctTab - na podstawie liczby dziesiętnej otrzymujemy wynik w OCT
 
 -ClearFront - usuwa '0' z przodu, metoda kosmetyczna
 
 	IN: tekst, który ma zostać edytowany
 
-	OUT: zedytowany tekst.<br>
+	OUT: zedytowany tekst.
+	
 	
 ![](screenshots/TabToConvert.JPG)<br>
 
-6.4 Bin Conv - każda z metod przyjmuje liczbę wpisaną przez użytkownika oraz zwraca przekonwertowaną<br>
+6.4 Bin Conv - każda z metod przyjmuje liczbę wpisaną przez użytkownika(string) oraz zwraca przekonwertowaną(string<br>
 
 Metody:
 - BinToDec - konwersja Bin->Dec
@@ -139,26 +145,41 @@ Metody:
 6.5 HexConv<br>
 
 Metody:
-- HexToBin
-- HexToDec
+- HexToBin - dla każdej cyfry w liczbie HEX przypisuje kolejno jej odpowienik 4-cyfrowej liczby binarnie.
+
+	OUT: liczba BIN (string)
+	
+- HexToDec - na podstawie cyfry w liczbie HEX tworzy liczbę dziesiętną zgodnie ze schematem przedstawionym w punkcie 5.
+
+	OUT: liczba DEC(string) 
 - HexToOct - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
+	OUT: liczba OCT(string)
 
 ![](screenshots/HexConv.JPG)<br>
 
 
 6.6 OctConv<br>
 Metody:
-- OctToBin
+- OctToBin - dla każdej cyfry w liczbie wprowadzonej przez użytkownika tworzy jej 3 cyfrowy binarny odpowiednik
+
+	OUT: liczba BIN(string)
 - OctToDec - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
+
+	OUT: liczba DEC(string)
 - OctToHex - wykorzystuje przekonwertowaną liczbę binarnie i wykorzystuje metodę z BinConv
+
+	OUT: liczba HEX(string)
 
 ![](screenshots/OctConv.JPG)<br>
 
 6.7 DecConv<br>
 Metody:
-- DecToBin
-- DecToOct
-- DecToHex
+- DecToBin - metoda realizuje funkcję opisaną w punkcie 5-tym dla tej konwersji.
+OUT: liczba BIN(string)
+- DecToOct -metoda realizuje funkcję opisaną w punkcie 5-tym dla tej konwersji.
+OUT: liczba OCT(string)
+- DecToHex - metoda realizuje funkcję opisaną w punkcie 5-tym dla tej konwersji.
+OUT: liczba HEX(string)
 
 ![](screenshots/DecConv.JPG)<br>
 
